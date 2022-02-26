@@ -10,6 +10,17 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ @font-face {
+    font-family:"candy-inc", sans-serif;
+    src: url(static/css/candy-inc/CANDY___.otf);
+
+ }
+ 
+ .navbar-brand{
+   font-family: "candy-inc", sans-serif;
+ }
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
