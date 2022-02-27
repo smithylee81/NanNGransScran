@@ -21,6 +21,7 @@
    font-family: "candy-inc", sans-serif;
  }
 
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11445,6 +11446,7 @@ html {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
 }
+
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
