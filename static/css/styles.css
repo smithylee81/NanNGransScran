@@ -21,6 +21,18 @@
    font-family: "candy-inc", sans-serif;
  }
 
+#portfolio{
+  background-color: #dddde7;
+}
+
+header{
+  background-image: url("https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg");
+  background-repeat: no-repeat;
+ /*background-size:cover;
+  background-position:center;*/
+  display: flex;
+  flex-wrap: wrap;
+}
 
 :root {
   --bs-blue: #0d6efd;
