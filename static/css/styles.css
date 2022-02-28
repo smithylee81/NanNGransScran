@@ -10,29 +10,37 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ @import url("https://www.1001fonts.com/candy-inc-font.html");
 
- @font-face {
+ @font-face{
     font-family:"candy-inc", sans-serif;
-    src: url(static/css/candy-inc/CANDY___.otf);
-
  }
  
  .navbar-brand{
    font-family: "candy-inc", sans-serif;
+   text-shadow: #000;
  }
 
 #portfolio{
   background-color: #dddde7;
 }
 
+/********* HEADINGS & NAVBAR **********/
 header{
   background-image: url("https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg");
   background-repeat: no-repeat;
- /*background-size:cover;
-  background-position:center;*/
-  display: flex;
-  flex-wrap: wrap;
+  background-size:cover;
+  background-position:center;
 }
+
+.masthead-heading{
+  color: #495057;
+}
+
+.masthead {
+  text-align: left;
+}
+
 
 :root {
   --bs-blue: #0d6efd;
