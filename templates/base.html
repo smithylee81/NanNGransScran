@@ -31,25 +31,27 @@
 <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Nan &#505; Grans Scran</a>
+                <a class="navbar-brand" href="{{ url_for('get_recipes') }}">Nan &#505; Grans Scran</a>
                 <button class="navbar-toggler font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('get_recipes') }}">Home</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Profile</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">New Recipe</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Manage Categories</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Add New Recipe</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#scullery">Scullery</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Manage Scullery</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Log Out</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Log In</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Register</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('register') }}">Register</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 <!-- NAVBAR END-->
+
 
 <!-- MASTHEAD HEADER -->
 <header class="masthead bg-primary text-white text-center">
@@ -57,9 +59,10 @@
         <!-- Masthead Avatar Image-->
        <!--- <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." /> -->
         <!-- Masthead Heading-->
+
         <h1 class="masthead-heading mb-0">Nan &#505; Grans Scran</h1>
         <!-- Icon Divider-->
-        <div class="divider-custom divider-light">
+        <div class="divider-custom divider-light align-items-left">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fa-solid fa-utensils"></i></div>
             <div class="divider-custom-line"></div>
@@ -69,6 +72,8 @@
     </div>
 </header>
 
+{% block content %}
+{% endblock %}
 
 <!-- SCULLERY SECTION-->
 <section class="page-section portfolio" id="portfolio">
@@ -107,7 +112,7 @@
                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                         <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                     </div>
-                    <img class="img-fluid" src="static/assets/img/portfolio/ChickenMain.png" alt="..." />
+                    <img class="img-fluid" src="static/assets/img/portfolio/ChickenMain1.png" alt="..." />
                 </div>
             </div>
             <!-- SCULLERY ITEM 4-->
@@ -116,13 +121,15 @@
                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                         <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                     </div>
-                    <img class="img-fluid" src="static/assets/img/portfolio/game.png" alt="..." />
+                    <img class="img-fluid" src="static/assets/img/portfolio/PuddingPic.png" alt="..." />
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- SCULLERY SECTION END-->
+
+
 
 <!-- ABOUT SECTION-->
 <section class="page-section bg-primary text-white mb-0" id="about">
@@ -144,17 +151,20 @@
 </section>
 <!-- ABOUT SECTION END-->
 
+
+
+
 <!-- FOOTER-->
 <footer class="footer text-center">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <!-- Footer Social Icons-->
             <div class="col-lg-4 mb-5 mb-lg-0 justify-content-center">
-                <h4 class="text-uppercase mb-4">Smithylee81</h4>
-                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                <h4 class="mb-4">smithylee81</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/smithylee81" target="_blank"><i class="fab fa-github-square"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
             </div>
         </div>
     </div>

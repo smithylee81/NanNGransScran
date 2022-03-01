@@ -22,7 +22,7 @@
  }
 
 #portfolio{
-  background-color: #dddde7;
+  background-color: #cfc0a7;
 }
 
 /********* HEADINGS & NAVBAR **********/
@@ -31,10 +31,13 @@ header{
   background-repeat: no-repeat;
   background-size:cover;
   background-position:center;
+
 }
+  
 
 .masthead-heading{
   color: #495057;
+  align-items: left;
 }
 
 .masthead {
