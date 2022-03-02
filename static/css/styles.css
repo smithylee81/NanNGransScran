@@ -10,40 +10,52 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- @import url("https://www.1001fonts.com/candy-inc-font.html");
 
- @font-face{
-    font-family:"candy-inc", sans-serif;
- }
+ /************ LOGO FONT *************
+ CREDIT TO 'CDN FONTS.COM'*/
+
+ @import url('http://fonts.cdnfonts.com/css/vintage-party');
+
  
  .navbar-brand{
-   font-family: "candy-inc", sans-serif;
+   font-family: "Vintage Party", sans-serif;
    text-shadow: #000;
  }
 
 #portfolio{
-  background-color: #cfc0a7;
+  background-color: #DDBEA9;
 }
 
 /********* HEADINGS & NAVBAR **********/
+
 header{
+  color: #495057;
+  align-items: left;
   background-image: url("https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   background-position:center;
-
-}
-  
-
-.masthead-heading{
-  color: #495057;
-  align-items: left;
 }
 
 .masthead {
   text-align: left;
 }
 
+#about{
+  background-color: #DDBEA9;
+}
+
+/************ REGISTER CONTAINER ********************/
+
+.register-container{
+  position: relative;
+  margin-top: 50px;
+  top: 50px;
+}
+
+.register-head{
+  align-items: center;
+}
 
 :root {
   --bs-blue: #0d6efd;
@@ -11534,12 +11546,12 @@ html {
 }
 
 .footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #2c3e50;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #CB997E;
   color: #fff;
 }
 
 .copyright {
-  background-color: #1a252f;
+  background-color: #CB997E;
 }
