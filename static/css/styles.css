@@ -54,7 +54,8 @@ header{
 }
 
 .register-head{
-  align-items: center;
+  text-align: center;
+  color: #6c757d;
 }
 
 :root {
