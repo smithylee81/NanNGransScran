@@ -11,6 +11,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+/************* CREDIT TO STARTBOOTSTRAP FOR 'FREELANCER' TEMPLATE ************/
+
  /************ LOGO FONT *************
  CREDIT TO 'CDN FONTS.COM'*/
 
@@ -30,17 +32,18 @@
 
 header{
   color: #495057;
-  align-items: left;
   background-image: url("https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg");
   background-repeat: no-repeat;
   background-size:cover;
-  background-position:center;
+  background-attachment: fixed;
 }
 
-.masthead {
-  text-align: left;
+.masthead-heading{
+  color: #6B705C;
+  justify-content: left;
 }
 
+/********* HEADINGS & NAVBAR **********/
 #about{
   background-color: #DDBEA9;
 }
@@ -48,9 +51,9 @@ header{
 /************ REGISTER CONTAINER ********************/
 
 .register-container{
-  position: relative;
   margin-top: 50px;
   top: 50px;
+  
 }
 
 .register-head{
