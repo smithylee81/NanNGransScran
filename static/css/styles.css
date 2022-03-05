@@ -30,6 +30,11 @@
 
 /********* HEADINGS & NAVBAR **********/
 
+
+.navbar{
+  background-color: #CB997E;
+
+}
 header{
   color: #495057;
   background-image: url("https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg");
@@ -50,15 +55,22 @@ header{
 
 /************ REGISTER CONTAINER ********************/
 
-.register-container{
-  margin-top: 50px;
-  top: 50px;
-  
+#register{
+  margin-top: 0px;
 }
 
 .register-head{
+  margin-top: auto;
   text-align: center;
   color: #6c757d;
+}
+
+#registerBtn{
+  margin-bottom: 5rem;
+}
+
+#registerCard{
+  background-color: #FFE8D6;
 }
 
 :root {

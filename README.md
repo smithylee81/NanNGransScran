@@ -82,7 +82,7 @@ It features complementary greys and browns that stand out to make the content ea
 
 The colours chosen are:
 
-![Coolors Palette](assets/images/CoolorsPic______)
+![Coolors Palette](static/assets/img/portfolio/CoolorsPic.png)
 
 
 Format: [Coolors Palette]( https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c)
@@ -154,15 +154,14 @@ Wireframes were hand drawn and can be found in pdf form in [wireframes](static/a
   - Used to test performance.
 - [amiresponsive](http://ami.responsivedesign.is/)
   - An online tool to check how responsive the site is on different devices.
--[W3C CSS Validation Service]( https://jigsaw.w3.org/css-validator/#validate_by_input)
- - Used to validate the CSS
--[W3C Markup Validation Service]( https://validator.w3.org/#validate_by_input)
- - Used to validate the HTML
-
+- [W3C CSS Validation Service]( https://jigsaw.w3.org/css-validator/#validate_by_input)
+  - Used to validate the CSS
+- [W3C Markup Validation Service]( https://validator.w3.org/#validate_by_input)
+  - Used to validate the HTML
 - [Heroku]( https://dashboard.heroku.com/apps)
- - Used to launch the live website
--[MongoDB]( https://www.mongodb.com/)
- - Used to create the recipe database and store all required information such as recipe titles, ingredients, cooking times etc. 
+  - Used to launch the live website
+- [MongoDB]( https://www.mongodb.com/)
+  - Used to create the recipe database and store all required information such as recipe titles, ingredients, cooking times etc. 
 
 [Back to contents](#contents)
 

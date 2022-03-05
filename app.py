@@ -24,23 +24,24 @@ mongo = PyMongo(app)
 #    recipes = mongo.db.recipes.find()
 #    return render_template("recipes.html", recipes=recipes)
 
+#Home Page function
 @app.route('/')
 @app.route('/home')
 def home():
     """Home page displaying Hero Image and About Section"""
     return render_template('home.html', title="Home")
 
-
+#Scullery/Recipes Category Section
 @app.route("/scullery")
 def scullery():
     return render_template("scullery.html", page_title="scullery")
 
-
+#Add New Recipe Function
 @app.route("/new_recipe")
 def new_recipe():
     return render_template("new_recipe.html", page_title="new_recipe")
 
-
+#Registration Form Functionality
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
