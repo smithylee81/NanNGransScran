@@ -16,13 +16,19 @@
  /************ LOGO FONT *************
  CREDIT TO 'CDN FONTS.COM'*/
 
+ <style>
  @import url('http://fonts.cdnfonts.com/css/vintage-party');
+</style>
 
  
  .navbar-brand{
    font-family: "Vintage Party", sans-serif;
    text-shadow: #000;
  }
+
+body{
+  font-family: 'Vintage Party', sans-serif;
+}
 
 #portfolio{
   background-color: #DDBEA9;
@@ -56,21 +62,26 @@ header{
 /************ REGISTER CONTAINER ********************/
 
 #register{
-  margin-top: 0px;
+  margin: 0px;
 }
 
 .register-head{
-  margin-top: auto;
+  margin-top: 0.5rem;
   text-align: center;
   color: #6c757d;
 }
 
-#registerBtn{
-  margin-bottom: 5rem;
+#sendMessageButton{
+  margin-bottom: 2.5rem; 
 }
 
 #registerCard{
   background-color: #FFE8D6;
+}
+
+label{
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 :root {

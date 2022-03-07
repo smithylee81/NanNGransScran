@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css">
-    <title>Nan &#505; Grans Scran<i class="fa-solid fa-utensils text-white"></i></title>
+    <title>Nan &#505; Grans Scran</title>
     
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -14,9 +14,10 @@
     <!-- Font Awesome icons (free version)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
-    <!-- Google fonts-->
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-      <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Google fonts/CDN Fonts-->
+      <link href="http://fonts.cdnfonts.com/css/vintage-party" rel="stylesheet" type="text/css">
+    <!--- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" /> ---->
     <!-- Core theme CSS (includes Bootstrap)-->
       <link href="static/css/styles.css" rel="stylesheet" />
       
@@ -39,7 +40,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('home') }}">Home</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Profile</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('new_recipe') }}>Add Recipe</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('new_recipe') }}">Add Recipe</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('scullery') }}">Scullery</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Manage Scullery</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Log Out</a></li>
