@@ -85,7 +85,13 @@ label{
 }
 
 .flashes h4 {
+  justify-content: center;
   line-height: 2;
+}
+
+/************ LOG IN CONTAINER ********************/
+#loginCard{
+  background-color: #FFE8D6;
 }
 
 :root {

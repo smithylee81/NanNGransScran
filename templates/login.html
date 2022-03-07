@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-  <h2 class="register-head">Register</h2> 
+  <h2 class="register-head">Log In</h2> 
 
   <!---  -->
 
 <div class="card">
-  <section id="register">
+  <section id="login">
   <div class="container-fluid justify-content-center">
-<div class="row" id="registerCard">
+<div class="row" id="loginCard">
   <div class="col-lg-6 col-md-10 mx-auto"> 
-    <form name="register" id="registerForm" method="POST" action="{{ url_for('register') }}">
+    <form name="login" id="loginForm" method="POST" action="{{ url_for('login') }}">
           <!-- username -->
       <div class="control-group">
         <div class="form-group floating-label-form-group controls">
-          <i class="fa-solid fa-user prefix light-blue-text text-darken-4"></i>
+          <i class="fa-solid fa-gear prefix light-blue-text text-darken-4"></i>
           <label>Username</label>
           <input type="text" name="username" class="form-control" placeholder="Username" id="username" minlength="5"
                 maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"required data-validation-required-message="Please enter your user name.">
@@ -33,10 +33,10 @@
       </div>
   
       <br>
-      <!-- register -->
-      <div id="registerBtn">
+      <!-- Log In -->
+      <div id="loginBtn">
        <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="sendMessageButton">Register <i class="fa-solid fa-utensils"></i></button>
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Log In <i class="fa-solid fa-utensils"></i></button>
        </div>
       </div>
     </form>
@@ -50,8 +50,8 @@
 <div class="row">
   <div class="col s12">
       <p class="text-center">
-          Already Registered?
-          <a href="{{ url_for('login') }}" class="light-blue-text text-darken-4">Log In</a>
+          New Here?
+          <a href="{{ url_for('register') }}" class="light-blue-text text-darken-4">Register An Account</a>
       </p>
   </div>
 </div>
