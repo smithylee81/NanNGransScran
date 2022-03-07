@@ -16,7 +16,8 @@
         <div class="form-group floating-label-form-group controls">
           <i class="fa-solid fa-user prefix light-blue-text text-darken-4"></i>
           <label>Username</label>
-          <input type="text" name="username" class="form-control" placeholder="Username" id="username" required data-validation-required-message="Please enter your user name.">
+          <input type="text" name="username" class="form-control" placeholder="Username" id="username" minlength="5"
+                maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"required data-validation-required-message="Please enter your user name.">
           <p class="help-block text-danger"></p>
         </div>
       </div>
@@ -25,7 +26,8 @@
         <div class="form-group floating-label-form-group controls">
           <i class="fa-solid fa-key prefix light-blue-text text-darken-4"></i>
           <label>Password</label>
-          <input type="text" name="password" class="form-control" placeholder="password" id="password" required data-validation-required-message="Please enter your password.">
+          <input type="text" name="password" class="form-control" placeholder="password" id="password" minlength="5"
+                maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required data-validation-required-message="Please enter your password.">
           <p class="help-block text-danger"></p>
         </div>
       </div>
