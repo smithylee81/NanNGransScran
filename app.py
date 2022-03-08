@@ -15,33 +15,40 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+
 mongo = PyMongo(app)
 
 
-#@app.route("/")
-#@app.route("/get_recipes")
-#def get_recipes():
-#    recipes = mongo.db.recipes.find()
-#    return render_template("recipes.html", recipes=recipes)
+recipe_db = mongo.db.recipes
 
-#Home Page function
+# Home Page function
+
 @app.route('/')
 @app.route('/home')
 def home():
     """Home page displaying Hero Image and About Section"""
     return render_template('home.html', title="Home")
 
-#Scullery/Recipes Category Section
+
+# Scullery/Recipes Category Section
+
 @app.route("/scullery")
 def scullery():
-    return render_template("scullery.html", page_title="scullery")
+    scullery_categories = mongo.db.scullery_categories.find()
+    return render_template("scullery.html")
 
-#Add New Recipe Function
+
+#categories=scullery_categories
+
+
+# Add New Recipe Function
+
 @app.route("/new_recipe")
 def new_recipe():
     return render_template("new_recipe.html", page_title="new_recipe")
 
-#Registration Form Functionality - Credit to CI Task Manager project
+# Registration Form Functionality - Credit to CI Task Manager project
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -64,7 +71,8 @@ def register():
         flash("Registration Successful!")
     return render_template("register.html")
 
-#Log In Form Functionality - Credit to CI Task Manager project
+# Log In Form Functionality - Credit to CI Task Manager project
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -93,7 +101,8 @@ def login():
 
     return render_template("login.html")
 
-#Profile Functionality - Credit to CI Task Manager project
+# Profile Functionality - Credit to CI Task Manager project
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # get session user's username from MongoDB
@@ -105,6 +114,8 @@ def profile(username):
 
     return redirect(url_for("login"))
 
+
+# Log Out Functionality
 
 @app.route("/logout")
 def logout():

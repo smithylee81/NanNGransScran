@@ -16,15 +16,9 @@
  /************ LOGO FONT *************
  CREDIT TO 'CDN FONTS.COM'*/
 
- <style>
- @import url('http://fonts.cdnfonts.com/css/vintage-party');
-</style>
 
- 
- .navbar-brand{
-   font-family: "Vintage Party", sans-serif;
-   text-shadow: #000;
- }
+ @import url('http://fonts.cdnfonts.com/css/vintage-party');
+
 
 body{
   font-family: 'Vintage Party', sans-serif;
@@ -37,10 +31,6 @@ body{
 /********* HEADINGS & NAVBAR **********/
 
 
-.navbar{
-  background-color: #CB997E;
-
-}
 header{
   color: #495057;
   background-image: url("https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg");
@@ -92,6 +82,12 @@ label{
 /************ LOG IN CONTAINER ********************/
 #loginCard{
   background-color: #FFE8D6;
+}
+
+/************ SCULLERY SECTION ********************/
+
+.page-section-heading{
+  margin-top: 2rem;
 }
 
 :root {
