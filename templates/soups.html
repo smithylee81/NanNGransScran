@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- SOUP SECTION -->
+<section class="page-section portfolio" name="soups" id="portfolio">
+    <div class="container">
+        <!-- SOUP SECTION HEADING -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Soups</h2>
+        <!-- ICON DIVIDER -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fa-solid fa-carrot"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- SOUP CARDS -->
+        {% for recipe in recipes %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ recipe_url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ recipes.recipe_name }}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{ recipes.recipe_ingredients }}
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </li>
+              <li class="list-group-item">{{ recipes.recipe_method}}
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </li>
+              <li class="list-group-item">{{ recipes.cooking_time }}
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="card-link">Edit Recipe</a>
+              <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="card-link">Delete Recipe</a>
+            </div>
+            {% endfor %}
+        </div>
+</section>
+<!--- SCULLERY SECTION END --->
+
+
+
+{% endblock %}

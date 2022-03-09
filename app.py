@@ -11,6 +11,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -19,18 +20,18 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-recipe_db = mongo.db.recipes
+#recipe_db = mongo.db.recipes
 
 # Home Page function
 
 @app.route('/')
 @app.route('/home')
 def home():
-    """Home page displaying Hero Image and About Section"""
+    """Home page displaying background Image & About Section"""
     return render_template('home.html', title="Home")
 
 
-# Scullery/Recipes Category Section
+# Scullery/Recipes Category Sectiond
 
 @app.route("/scullery")
 def scullery():
@@ -38,7 +39,53 @@ def scullery():
     return render_template("scullery.html")
 
 
-#categories=scullery_categories
+@app.route("/soups")
+def get_soups():
+   soups = list(mongo.db.soups.find())
+   return render_template("soups.html", soups=soups)
+
+
+@app.route("/")
+@app.route("/get_recipe")
+def get_recipe():
+   recipe = list(mongo.db.recipe.find())
+   return render_template("home.html", recipe=recipe)
+
+#@app.route('/soup/<soup_id>')
+#def soup(soup_id):
+#   soup_db = mongo.db.soup
+#   soup_object = soup_db.find_one({'soup_id': soup_id})
+#   return render_template("soup.html")
+
+#@app.route("/soup/<recipe_id>")
+#def soups(recipe_id):
+#    soups_db = mongo.db.soups_categories.find({'recipe_id': recipe_id})
+#   return render_template("soup.html")
+
+
+
+#@app.route("/soup")
+#def get_tasks():
+#    tasks = mongo.db.tasks.find()
+#   return render_template("tasks.html", tasks=tasks)
+
+
+#@app.route("/")
+#def starters():
+#    starters_categories = mongo.db.starters_categories.find()
+#    return render_template("starters.html")
+
+
+#@app.route("/")
+#def mains():
+#    mains_categories = mongo.db.mains_categories.find()
+#    return render_template("mains.html")
+
+
+#@app.route("/")
+#def puddings():
+#    puddings_categories = mongo.db.puddings_categories.find()
+#    return render_template("puddings.html")
 
 
 # Add New Recipe Function

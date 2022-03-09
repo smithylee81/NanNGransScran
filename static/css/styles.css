@@ -30,7 +30,6 @@ body{
 
 /********* HEADINGS & NAVBAR **********/
 
-
 header{
   color: #495057;
   background-image: url("https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg");
@@ -44,7 +43,7 @@ header{
   justify-content: left;
 }
 
-/********* HEADINGS & NAVBAR **********/
+/********* About Section - Homa Page **********/
 #about{
   background-color: #DDBEA9;
 }
