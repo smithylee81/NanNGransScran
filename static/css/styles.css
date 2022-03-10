@@ -89,6 +89,30 @@ label{
   margin-top: 2rem;
 }
 
+/************ SOUP SECTION ************************/
+
+#soup_cards{
+  border: 1px solid #dadada;
+  box-shadow: 10px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  width: 50%;
+}
+
+/*************** FOOTER *********************/
+
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #CB997E;
+  color: #fff;
+}
+
+.copyright {
+  background-color: #CB997E;
+}
+
+/*************** CSS BELOW INHERITED FROM STARTBOOTSTRAP THEME 'FREELANCER' *******************/
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11577,13 +11601,3 @@ html {
   }
 }
 
-.footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #CB997E;
-  color: #fff;
-}
-
-.copyright {
-  background-color: #CB997E;
-}

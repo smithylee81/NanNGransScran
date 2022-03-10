@@ -17,10 +17,20 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 
+# MongoDB commands: https://www.mongodb.com/developer/quickstart/cheat-sheet/#crud
 mongo = PyMongo(app)
 
 
-#recipe_db = mongo.db.recipes
+# Get the recipes collection
+recipes = mongo.db.recipes
+
+# Call the built-in function to assist with debugging: https://realpython.com/lessons/print-and-breakpoint/
+#breakpoint()
+
+
+# Find recipe items that match a condition
+# soups = recipes.find({'category_name': 'Soups'})
+
 
 # Home Page function
 
@@ -31,7 +41,7 @@ def home():
     return render_template('home.html', title="Home")
 
 
-# Scullery/Recipes Category Sectiond
+# Scullery/Recipes Category Section Function
 
 @app.route("/scullery")
 def scullery():
@@ -39,60 +49,47 @@ def scullery():
     return render_template("scullery.html")
 
 
+# Soups Section Function
 @app.route("/soups")
 def get_soups():
-   soups = list(mongo.db.soups.find())
-   return render_template("soups.html", soups=soups)
+    # Find all of the recipes in the DB that have attribute 'category_name: "Soups"'
+    soups = recipes.find({'category_name': 'Soups'})
+    return render_template("soups.html", soups=soups)
 
 
-@app.route("/")
-@app.route("/get_recipe")
-def get_recipe():
-   recipe = list(mongo.db.recipe.find())
-   return render_template("home.html", recipe=recipe)
-
-#@app.route('/soup/<soup_id>')
-#def soup(soup_id):
-#   soup_db = mongo.db.soup
-#   soup_object = soup_db.find_one({'soup_id': soup_id})
-#   return render_template("soup.html")
-
-#@app.route("/soup/<recipe_id>")
-#def soups(recipe_id):
-#    soups_db = mongo.db.soups_categories.find({'recipe_id': recipe_id})
-#   return render_template("soup.html")
+# Starters Section Function
+@app.route("/starters")
+def get_starters():
+    # Find all of the recipes in the DB that have attribute 'category_name: "Starters"'
+    starters = recipes.find({'category_name': 'Starters'})
+    return render_template("starters.html", starters=starters)
 
 
-
-#@app.route("/soup")
-#def get_tasks():
-#    tasks = mongo.db.tasks.find()
-#   return render_template("tasks.html", tasks=tasks)
-
-
-#@app.route("/")
-#def starters():
-#    starters_categories = mongo.db.starters_categories.find()
-#    return render_template("starters.html")
+# Mains Section Function
+@app.route("/mains")
+def get_mains():
+    # Find all of the recipes in the DB that have attribute 'category_name: "Mains"'
+    mains = recipes.find({'category_name': 'Mains'})
+    return render_template("mainss.html", mains=mains)
 
 
-#@app.route("/")
-#def mains():
-#    mains_categories = mongo.db.mains_categories.find()
-#    return render_template("mains.html")
+# Puddings Section Function
+@app.route("/puddings")
+def get_puddings():
+    # Find all of the recipes in the DB that have attribute 'category_name: "Puddings"'
+    puddings = recipes.find({'category_name': 'Puddings'})
+    return render_template("puddings.html", puddings=puddings)
 
 
-#@app.route("/")
-#def puddings():
-#    puddings_categories = mongo.db.puddings_categories.find()
-#    return render_template("puddings.html")
-
+#################################################################################
 
 # Add New Recipe Function
 
 @app.route("/new_recipe")
 def new_recipe():
     return render_template("new_recipe.html", page_title="new_recipe")
+
+    
 
 # Registration Form Functionality - Credit to CI Task Manager project
 
