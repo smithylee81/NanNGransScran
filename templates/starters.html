@@ -18,9 +18,9 @@
         <!-- STARTERS CARDS --->
           {% for starter in starters %}
             <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
-              <img src="{{ soup.recipe_url }}" class="card-img-top" alt="...">
+              <img src="{{ starter.recipe_url }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{ starters.recipe_name }}</h5>
+                  <h5 class="card-title">{{ starter.recipe_name }}</h5>
                     <p class="card-text">RECIPE NAME</p>
                 </div>
               <ul class="list-group list-group-flush">

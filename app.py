@@ -70,7 +70,7 @@ def get_starters():
 def get_mains():
     # Find all of the recipes in the DB that have attribute 'category_name: "Mains"'
     mains = recipes.find({'category_name': 'Mains'})
-    return render_template("mainss.html", mains=mains)
+    return render_template("mains.html", mains=mains)
 
 
 # Puddings Section Function
@@ -81,7 +81,7 @@ def get_puddings():
     return render_template("puddings.html", puddings=puddings)
 
 
-#################################################################################
+###################################################################################
 
 # Add New Recipe Function
 
@@ -89,7 +89,29 @@ def get_puddings():
 def new_recipe():
     return render_template("new_recipe.html", page_title="new_recipe")
 
-    
+###################################################################################
+
+# Edit Recipe Function
+
+
+
+
+###################################################################################
+
+# Delete Recipe Function
+
+
+
+
+###################################################################################
+
+# Manage Scullery/Admin Only Function
+
+
+
+
+###################################################################################
+
 
 # Registration Form Functionality - Credit to CI Task Manager project
 

@@ -98,6 +98,43 @@ label{
   width: 50%;
 }
 
+/************ NEW RECIPE SECTION ************************/
+
+#new_recipe_cards{
+  border: 1px solid #dadada;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  width: 50%;
+}
+
+#new_recipe_cards.card{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#new_recipecard{
+  background-color: #FFE8D6;
+}
+
+#new_recipe_header{
+  margin-top: 2rem;
+}
+
+/************ STARTERS SECTION ************************/
+
+
+
+
+/************ MAINS SECTION ************************/
+
+
+
+
+/************ PUDDINGS SECTION ************************/
+
+
+
+
 /*************** FOOTER *********************/
 
 .footer {

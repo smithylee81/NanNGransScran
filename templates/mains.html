@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- SOUP SECTION -->
-<section class="page-section portfolio" name="soups" id="portfolio">
+<!-- MAINS SECTION -->
+<section class="page-section portfolio" name="mains" id="portfolio">
     <div class="container">
 
   
-        <!-- SOUP SECTION HEADING -->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Soups</h2>
+        <!-- MAINS SECTION HEADING -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Mains</h2>
         <!-- ICON DIVIDER -->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -15,22 +15,22 @@
             <div class="divider-custom-line"></div>
         </div>
 
-        <!-- SOUP CARDS --->
-          {% for soup in soups %}
+        <!-- MAINS CARDS --->
+          {% for main in mains %}
             <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
-              <img src="{{ soup.recipe_url }}" class="card-img-top" alt="...">
+              <img src="{{ main.recipe_url }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{ soup.recipe_name }}</h5>
+                  <h5 class="card-title">{{ main.recipe_name }}</h5>
                     <p class="card-text">RECIPE NAME</p>
                 </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{ soup.recipe_ingredients }}
+                <li class="list-group-item">{{ main.recipe_ingredients }}
                   <p class="card-text">RECIPE INGREDIENTS</p>
               </li>
-              <li class="list-group-item">{{ soup.recipe_method}}
+              <li class="list-group-item">{{ main.recipe_method}}
                   <p class="card-text">RECIPE METHOD</p>
               </li>
-              <li class="list-group-item">{{ soup.cooking_time }}
+              <li class="list-group-item">{{ main.cooking_time }}
                   <p class="card-text">RECIPE COOKING TIME</p>
               </li>
               </ul>
@@ -42,7 +42,7 @@
          
             
   </section>
- <!-- SOUP SECTION END -->
+ <!-- MAINS SECTION END -->
          
 
 {% endblock %}
