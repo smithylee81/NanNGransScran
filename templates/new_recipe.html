@@ -14,10 +14,11 @@
             <div class="divider-custom-line"></div>
         </div>
 
-        <form name="new_recipe_form" class="row justify-content-center" method="POST" action="">
+        <form name="new_recipe_form" class="row justify-content-center" method="POST" action="{{ url_for('new_recipe') }}">
         <div class="card" style="width: 18rem;" id="new_recipe_cards"> 
             <img src="https://us.123rf.com/450wm/squarelogo/squarelogo1207/squarelogo120700055/14651230-vintage-top-secret-recipe.jpg?ver=6" class="card-img-top" alt="...">
             
+        <!---- CATEGORY SELECTION ----->
             <div class="input-group mb-3 justify-content-center">
                 <div class="input-group-prepend floating-label">
                   <label class="input-group-text" for="category_name">Recipe Type</label>
@@ -31,6 +32,7 @@
               </div>
             <hr>
 
+        <!---- RECIPE NAME SECTION ----->
         <div class="card-body" id="recipe-title">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -42,7 +44,7 @@
             </div>
         </div>
 
-        <!--- 1st Item on ul card li group list-->
+        <!---- RECIPE INGREDIENTS SECTION ----->
 <ul class="list-group list-group-flush">
         <li class="list-group-item">
             <div class="control-group">
@@ -55,7 +57,7 @@
             </div>
         </li>
 
-        <!--- 2nd Item on ul card li group list-->
+       <!---- RECIPE METHOD SECTION ----->
         <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -66,7 +68,7 @@
                 </div>
             </div>
         </li>
-         <!--- 3rd Item on ul card li group list-->
+        <!---- COOKING TIME SECTION ----->
          <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -79,9 +81,14 @@
             </div>
         </li>
 </ul>
+
+<!-- submit button -->
             <div class="card-body">
-                <a href="#" class="card-link">Add to Scullery</a>
-                <a href="#" class="card-link">Edit Recipe</a>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <input class="btn btn-primary btn-success text-shadow" type="submit" value="Add to Scullery">
+                    </div>
+                </div>
             </div>
         </div>
         </form>
