@@ -2,7 +2,7 @@
 {% block content %}
 
 
-<!------NEW RECIPE FORM ----->
+<!------NEW RECIPE FORM, credit to the CI Task Manager Project and Bootstrap Forms & Input Fields ----->
 <div class="container-fluid">
     <div class="row justify-content-center" id="new_recipecard">
 
@@ -14,42 +14,41 @@
             <div class="divider-custom-line"></div>
         </div>
 
+        <form name="new_recipe_form" class="row justify-content-center" method="POST" action="">
         <div class="card" style="width: 18rem;" id="new_recipe_cards"> 
             <img src="https://us.123rf.com/450wm/squarelogo/squarelogo1207/squarelogo120700055/14651230-vintage-top-secret-recipe.jpg?ver=6" class="card-img-top" alt="...">
         <div class="card-body">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <i class="fa-solid fa-signature prefix light-blue-text text-darken-4"></i>
-                  <label>RECIPE NAME</label>
-                  <input type="text" name="new_recipe_name" class="form-control" placeholder="Add Recipe Name Here" id="new_recipe_name" minlength="5"
-                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"required data-validation-required-message="Please enter a recipe name.">
+                  <i class="fa-solid fa-signature prefix"></i>
+                  <label for="recipe_name">RECIPE NAME</label>
+                  <input type="text" name="recipe_name" class="form-control" placeholder="Add Recipe Name Here" id="recipe_name" required data-validation-required-message="Please enter a recipe name.">
                   <p class="help-block text-danger"></p>
                 </div>
             </div>
         </div>
 
         <!--- 1st Item on ul card li group list-->
-    <ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush">
         <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <i class="fa-solid fa-pepper-hot prefix"></i>
-                  <label>RECIPE INGREDIENTS</label>
-                  <input type="text" name="new_recipe_ingred" class="form-control" placeholder="Add Ingredients Here" id="new_recipe_ingred" minlength="5"
-                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"required data-validation-required-message="Please enter recipe ingredients.">
-                  <p class="help-block text-danger"></p>
+                    <label for="recipe_ingredients">RECIPE INGREDIENTS</label>
+                    <textarea class="form-control" name="recipe_ingredients" id="recipe_ingredients" placeholder="Add Ingredients Here" rows="3" required data-validation-required-message="Please enter recipe ingredients."></textarea>
+                    <p class="help-block text-danger"></p>
                 </div>
             </div>
         </li>
+
         <!--- 2nd Item on ul card li group list-->
         <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <i class="fa-solid fa-blender prefix"></i>
-                  <label>RECIPE METHOD</label>
-                  <input type="text" name="new_recipe_method" class="form-control" placeholder="Add how to make it here" id="new_recipe_method" minlength="5"
-                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"required data-validation-required-message="Please enter the recipe method.">
-                  <p class="help-block text-danger"></p>
+                    <label for="recipe_method">RECIPE METHOD</label>
+                    <textarea class="form-control" name="recipe_method" id="recipe_method" placeholder="Add how to make it here" rows="3" required data-validation-required-message="Please enter the recipe method."></textarea>
+                    <p class="help-block text-danger"></p>
                 </div>
             </div>
         </li>
@@ -58,20 +57,20 @@
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <i class="fa-solid fa-clock prefix"></i>
-                  <label>COOKING TIME</label>
-                  <input type="text" name="new_recipe_time" class="form-control" placeholder="Add cooking time here" id="new_recipe_time" minlength="5"
+                  <label for="cooking_time">COOKING TIME</label>
+                  <input type="text" name="cooking_time" class="form-control" placeholder="Add cooking time here" id="cooking_time" minlength="5"
                         maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"required data-validation-required-message="Please enter cooking time.">
                   <p class="help-block text-danger"></p>
                 </div>
             </div>
         </li>
-    </ul>
+</ul>
             <div class="card-body">
                 <a href="#" class="card-link">Add to Scullery</a>
-                <a href="#" class="card-link">Edit Recipe?</a>
+                <a href="#" class="card-link">Edit Recipe</a>
             </div>
         </div>
-
+        </form>
     </div>
 </div>
 <br>
