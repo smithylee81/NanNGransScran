@@ -26,16 +26,24 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">{{ pudding.recipe_ingredients }}
                   <p class="card-text">RECIPE INGREDIENTS</p>
-              </li>
-              <li class="list-group-item">{{ pudding.recipe_method}}
+                </li>
+                <li class="list-group-item">{{ pudding.recipe_method}}
                   <p class="card-text">RECIPE METHOD</p>
-              </li>
-              <li class="list-group-item">{{ pudding.cooking_time }}
+                </li>
+                <li class="list-group-item">{{ pudding.cooking_time }}
                   <p class="card-text">RECIPE COOKING TIME</p>
-              </li>
+                </li>
               </ul>
+
+                <!---- Edit and Delete Buttons --->
               <div class="card-body">
-               
+                <div class="buttons">
+                  <div class="action_btn">
+                    
+                    <button type="button" class="btn btn-outline-success">Edit</button>
+                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                  </div>
+                </div>
               </div>
           </div>
           {% endfor %}

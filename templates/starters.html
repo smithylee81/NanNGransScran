@@ -11,21 +11,24 @@
         <!-- ICON DIVIDER -->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fa-solid fa-carrot"></i></div>
+            <div class="divider-custom-icon"><i class="fa-solid fa-cheese"></i></div>
             <div class="divider-custom-line"></div>
         </div>
 
         <!-- STARTERS CARDS --->
           {% for starter in starters %}
+          <div class="row">
+            <div class="col">
             <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
               <img src="{{ starter.recipe_url }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{ starter.recipe_name }}</h5>
-                    <p class="card-text">RECIPE NAME</p>
+                  <h4 class="card-title">{{ starter.recipe_name }}</h4>
+                    
                 </div>
               <ul class="list-group list-group-flush">
+                <h6>RECIPE INGREDIENTS</h6>
                 <li class="list-group-item">{{ starter.recipe_ingredients }}
-                  <p class="card-text">RECIPE INGREDIENTS</p>
+                  
               </li>
               <li class="list-group-item">{{ starter.recipe_method}}
                   <p class="card-text">RECIPE METHOD</p>
@@ -34,14 +37,23 @@
                   <p class="card-text">RECIPE COOKING TIME</p>
               </li>
               </ul>
+
+              <!---- Edit and Delete Buttons --->
               <div class="card-body">
-               
+                <div class="buttons">
+                  <div class="action_btn">
+                    <button type="button" class="btn btn-outline-info">View</button>
+                    <button type="button" class="btn btn-outline-success">Edit</button>
+                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                  </div>
+                </div>
               </div>
-          </div>
+
+          </div> 
+        </div>
+      </div>
           {% endfor %}
          
-            
   </section>
- <!-- STARTERS SECTION END -->
 
 {% endblock %}

@@ -85,8 +85,22 @@ def get_puddings():
 
 # Add New Recipe Function
 
-@app.route("/new_recipe")
+@app.route("/new_recipe", methods=["GET", "POST"])
 def new_recipe():
+    if request.method == "POST":
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_method": request.form.get("recipe_method"),
+            "cooking_time": request.form.get("cooking_time"),
+            "recipe_url": request.form.get("recipe_url"),
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Added Successfully!")
+        return redirect(url_for("scullery"))
+
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("new_recipe.html", categories=categories)
 
