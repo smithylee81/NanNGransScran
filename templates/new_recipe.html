@@ -17,7 +17,21 @@
         <form name="new_recipe_form" class="row justify-content-center" method="POST" action="">
         <div class="card" style="width: 18rem;" id="new_recipe_cards"> 
             <img src="https://us.123rf.com/450wm/squarelogo/squarelogo1207/squarelogo120700055/14651230-vintage-top-secret-recipe.jpg?ver=6" class="card-img-top" alt="...">
-        <div class="card-body">
+            
+            <div class="input-group mb-3 justify-content-center">
+                <div class="input-group-prepend floating-label">
+                  <label class="input-group-text" for="category_name">Recipe Type</label>
+                </div>
+                <select class="custom-select" id="category_name" name="category_name" required data-validation-required-message="Please select a recipe type.">
+                  <option selected>Choose...</option>
+                  {% for category in categories %}
+                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            <hr>
+
+        <div class="card-body" id="recipe-title">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <i class="fa-solid fa-signature prefix"></i>

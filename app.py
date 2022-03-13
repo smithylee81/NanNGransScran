@@ -87,7 +87,10 @@ def get_puddings():
 
 @app.route("/new_recipe")
 def new_recipe():
-    return render_template("new_recipe.html", page_title="new_recipe")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("new_recipe.html", categories=categories)
+
+
 
 ###################################################################################
 

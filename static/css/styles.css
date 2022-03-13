@@ -117,7 +117,17 @@ label{
 }
 
 #new_recipe_header{
+  justify-content: center;
   margin-top: 2rem;
+}
+
+#category_name{
+  height: 2rem;
+  margin-top: 2.25rem;
+}
+
+#recipe-title{
+  margin-top: 0;
 }
 
 /************ STARTERS SECTION ************************/
