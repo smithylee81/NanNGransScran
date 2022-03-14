@@ -149,6 +149,15 @@ label{
 /************ PUDDINGS SECTION ************************/
 
 
+/************ EDIT & DONE BUTTONS ON RECIPE CARDS ****/
+
+#editBtn{
+  margin: 2.5px;
+}
+
+#doneBtn{
+  margin: 2.5px;
+}
 
 
 /*************** FOOTER *********************/

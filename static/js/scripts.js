@@ -52,3 +52,12 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+/*
+    // Target the select element for form validation
+select = document.getElementById('select');
+if (select.value) {
+    // value is set to a valid option, so submit form
+  return true;
+}
+return false; */
