@@ -81,7 +81,7 @@ def get_puddings():
     return render_template("puddings.html", puddings=puddings)
 
 
-###################################################################################
+#################################################################
 
 # Add New Recipe Function
 
@@ -105,15 +105,50 @@ def new_recipe():
     return render_template("new_recipe.html", categories=categories)
 
 
-
-###################################################################################
+#################################################################
 
 # Edit Recipe Function
 
+#@app.route("/edit_recipe/<recipes_id>", methods=["GET", "POST"])
+#def edit_recipe(recipes_id):
+#    # Gets recipe ID
+#   recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
+#   categories = mongo.db.categories.find().sort({'starters'})
+#   return render_template("edit_recipe.html", recipes=recipes, categories=categories)
 
 
+#@app.route('/edit_recipe/<recipes_id>', methods=["GET"])
+#def edit_recipes(recipe_id):
+#   the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+#   all_categories =  mongo.db.categories.find()
+#   if request.method == "POST":
+#       flash("Ta da! You have edited the recipe on the database".format(
+#       ))
+#   return render_template("edit_recipe.html",  page_title="Edit", recipes=the_recipe, categories=all_categories) 
 
-###################################################################################
+
+@app.route("/edit_recipe/<recipe_id>",methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+
+    submit = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_method": request.form.get("recipe_method"),
+            "cooking_time": request.form.get("cooking_time"),
+            "recipe_url": request.form.get("recipe_url"),
+            }
+
+    if request.method == "POST":
+            mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": submit} )
+            flash("Recipe has been edited successfully :)")
+    
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+
+
+#################################################################
 
 # Delete Recipe Function
 

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<!------NEW RECIPE FORM, credit to the CI Task Manager Project and Bootstrap Forms & Input Fields ----->
+<div class="container-fluid">
+    <div class="row justify-content-center" id="new_recipecard">
+
+        <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="new_recipe_header">Edit Recipe</h3>
+        <!-- ICON DIVIDER-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fa-solid fa-clipboard"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <form name="EditRecipeForm" class="row justify-content-center" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+        <div class="card" style="width: 18rem;" id="new_recipe_cards"> 
+            <img src="https://previews.123rf.com/images/studiostoks/studiostoks1508/studiostoks150800070/44238328-ideen-kochbuch-hausrezept-lebensmittel-kochen-tutorial-frau-pop-art-retro-stil.jpg" class="card-img-top" alt="...">
+            
+        <!---- CATEGORY SELECTION ----->
+            <div class="input-group mb-3 justify-content-center">
+                <div class="input-group-prepend floating-label">
+                  <label class="input-group-text" for="category_name">Recipe Type</label>
+                </div>
+                <select class="custom-select" id="category_name" name="category_name" required data-validation-required-message="Please select a recipe type.">
+                  <option selected>Choose...</option>
+                  {% for category in categories %}
+                     {% if category.category_name == recipe.category_name %}
+                         <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                     {% else %}
+                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                     {% endif %}
+                  {% endfor %}
+                </select>
+              </div>
+            <hr>
+
+        <!---- RECIPE NAME SECTION ----->
+        <div class="card-body" id="recipe-title">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <i class="fa-solid fa-signature prefix"></i>
+                  <label for="recipe_name">RECIPE NAME</label>
+                  <input type="text" name="recipe_name" class="form-control" placeholder="Add Recipe Name Here" id="recipe_name" required data-validation-required-message="Please enter a recipe name.">
+                  <p class="help-block text-danger"></p>
+                </div>
+            </div>
+        </div>
+
+        <!---- RECIPE INGREDIENTS SECTION ----->
+<ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <i class="fa-solid fa-pepper-hot prefix"></i>
+                    <label for="recipe_ingredients">RECIPE INGREDIENTS</label>
+                    <textarea class="form-control" name="recipe_ingredients" id="recipe_ingredients" placeholder="Add Ingredients Here" rows="3" required data-validation-required-message="Please enter recipe ingredients."></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+        </li>
+
+       <!---- RECIPE METHOD SECTION ----->
+        <li class="list-group-item">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <i class="fa-solid fa-blender prefix"></i>
+                    <label for="recipe_method">RECIPE METHOD</label>
+                    <textarea class="form-control" name="recipe_method" id="recipe_method" placeholder="Add how to make it here" rows="3" required data-validation-required-message="Please enter the recipe method."></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+        </li>
+        <!---- COOKING TIME SECTION ----->
+         <li class="list-group-item">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <i class="fa-solid fa-clock prefix"></i>
+                  <label for="cooking_time">COOKING TIME</label>
+                  <input type="text" name="cooking_time" class="form-control" placeholder="Add cooking time here" id="cooking_time" required data-validation-required-message="Please enter cooking time.">
+                  <p class="help-block text-danger"></p>
+                </div>
+            </div>
+        </li>
+</ul>
+
+<!-- submit button -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="text-center">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <input class="btn btn-primary btn-success text-shadow" type="submit" value="Edit Recipe">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
