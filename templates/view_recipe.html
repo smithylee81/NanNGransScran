@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="row">
+    <div class="col">
+    <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
+      <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">{{ recipe.recipe_name }}</h4>
+            
+        </div>
+      <ul class="list-group list-group-flush">
+        <h6>RECIPE INGREDIENTS</h6>
+        <li class="list-group-item">{{ recipe.recipe_ingredients }}
+          
+      </li>
+      <li class="list-group-item">{{ recipe.recipe_method}}
+          <p class="card-text">RECIPE METHOD</p>
+      </li>
+      <li class="list-group-item">{{ recipe.cooking_time }}
+          <p class="card-text">RECIPE COOKING TIME</p>
+      </li>
+      </ul>
+
+          </div>
+        </div>
+      </div>
+
+  </div> 
+</div>
+</div>
+
+
+
+{% endblock %}

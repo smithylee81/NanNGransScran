@@ -45,6 +45,7 @@ def home():
 
 @app.route("/scullery")
 def scullery():
+    """Scullery page displaying the recipe categories"""
     scullery_categories = mongo.db.scullery_categories.find()
     return render_template("scullery.html")
 
@@ -52,6 +53,7 @@ def scullery():
 # Soups Section Function
 @app.route("/soups")
 def get_soups():
+    """Soups page displaying all soup recipes"""
     # Find all of the recipes in the DB that have attribute 'category_name: "Soups"'
     soups = recipes.find({'category_name': 'Soups'})
     return render_template("soups.html", soups=soups)
@@ -60,6 +62,7 @@ def get_soups():
 # Starters Section Function
 @app.route("/starters")
 def get_starters():
+    """Starters page displaying all starter recipes"""
     # Find all of the recipes in the DB that have attribute 'category_name: "Starters"'
     starters = recipes.find({'category_name': 'Starters'})
     return render_template("starters.html", starters=starters)
@@ -68,6 +71,7 @@ def get_starters():
 # Mains Section Function
 @app.route("/mains")
 def get_mains():
+    """Main meals page displaying all 'main' recipes"""
     # Find all of the recipes in the DB that have attribute 'category_name: "Mains"'
     mains = recipes.find({'category_name': 'Mains'})
     return render_template("mains.html", mains=mains)
@@ -76,6 +80,7 @@ def get_mains():
 # Puddings Section Function
 @app.route("/puddings")
 def get_puddings():
+    """Puddings page displaying all pudding recipes"""
     # Find all of the recipes in the DB that have attribute 'category_name: "Puddings"'
     puddings = recipes.find({'category_name': 'Puddings'})
     return render_template("puddings.html", puddings=puddings)
@@ -109,24 +114,6 @@ def new_recipe():
 
 # Edit Recipe Function
 
-#@app.route("/edit_recipe/<recipes_id>", methods=["GET", "POST"])
-#def edit_recipe(recipes_id):
-#    # Gets recipe ID
-#   recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
-#   categories = mongo.db.categories.find().sort({'starters'})
-#   return render_template("edit_recipe.html", recipes=recipes, categories=categories)
-
-
-#@app.route('/edit_recipe/<recipes_id>', methods=["GET"])
-#def edit_recipes(recipe_id):
-#   the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-#   all_categories =  mongo.db.categories.find()
-#   if request.method == "POST":
-#       flash("Ta da! You have edited the recipe on the database".format(
-#       ))
-#   return render_template("edit_recipe.html",  page_title="Edit", recipes=the_recipe, categories=all_categories) 
-
-
 @app.route("/edit_recipe/<recipe_id>",methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -147,6 +134,13 @@ def edit_recipe(recipe_id):
     
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
+# VIEW RECIPE
+
+@app.route("/view_recipe/<recipe_id>",methods=["GET"])
+def view_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    return render_template("view_recipe.html", recipe=recipe)
 
 #################################################################
 
