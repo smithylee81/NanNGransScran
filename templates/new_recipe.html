@@ -24,7 +24,7 @@
                   <label class="input-group-text" for="category_name">Recipe Type</label>
                 </div>
                 <select class="custom-select" id="category_name" name="category_name" required data-validation-required-message="Please select a recipe type.">
-                  <option selected>Choose...</option>
+                  <option selected disabled>Choose...</option>
                   {% for category in categories %}
                      <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                   {% endfor %}

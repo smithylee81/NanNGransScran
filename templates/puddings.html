@@ -40,23 +40,17 @@
                   <div class="buttons">
                     <div class="action_btn">
                       <div><i class="fa-solid fa-pen-to-square"></i>
-                        <a href="" id="editBtn" class="btn btn-outline-info">Edit</a>
+                        <a href="{{ url_for('view_recipe', recipe_id=pudding._id ) }}" id="viewBtn" class="btn btn-outline-secondary">View</a>
+                        <a href="{{ url_for('edit_recipe', recipe_id=pudding._id ) }}" id="editBtn" class="btn btn-outline-danger">Edit</a>
                         <a href="" id="doneBtn" class="btn btn-outline-success">Done</a>
                       </div>
-  
-  
-                      <!--<button type="button" class="btn btn-outline-info">View</button>
-                      <a href="" class="btn btn-outline-danger">Edit</a> -->
-  
                     </div>
                   </div>
                 </div>
+
           </div>
           {% endfor %}
-         
-            
+                
   </section>
- <!-- PUDDINGS SECTION END -->
-         
 
 {% endblock %}
