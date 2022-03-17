@@ -130,7 +130,7 @@ def edit_recipe(recipe_id):
 
     if request.method == "POST":
             mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": submit} )
-            flash("Recipe has been edited successfully :)")
+            flash("Your recipe has been edited successfully :)")
     
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
@@ -146,7 +146,11 @@ def view_recipe(recipe_id):
 
 # Delete Recipe Function
 
-
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("scullery"))
 
 
 ###################################################################################
@@ -181,6 +185,7 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
 # Log In Form Functionality - Credit to CI Task Manager project
