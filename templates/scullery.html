@@ -3,68 +3,124 @@
 
 <!-- SCULLERY SECTION-->
 <section class="page-section portfolio" name="scullery" id="portfolio">
-    <div class="container">
+    <div class="row">
         <!-- SCULLERY SECTION HEADING-->
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Scullery</h2>
         <!-- ICON DIVIDER-->
         <div class="divider-custom">
-            <div class="divider-custom-line"></div>
+         <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-utensils"></i></div>
             <div class="divider-custom-line"></div>
         </div>
+
+
         <!-- SCULLERY GRID ITEMS-->
-        <div class="row">
+    
+        <!-- SOUPS -->
+
+            <div class="col-lg-3 p-2">
+                <div class="card-deck">
+                  <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
+                      <img src="static/assets/img/portfolio/soup-1.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h4 class="card-title text-center"><em></em></h4> 
+                          </div>
             
-             <!-- SCULLERY ITEM 1-->
-            <div class="col-md-6 col-lg-3 mb-6">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <a href="soups"><i class="fas fa-plus fa-3x"></i></a>
+                        <!---- VIEW BUTTON ---->
+                        <div class="card-body">
+                          <div class="buttons">
+                            <div class="action_btn">
+                              <div>
+                                <a href="{{ url_for('get_soups') }}" id="viewBtn" class="btn btn-outline-secondary"><i class="fa-solid fa-book-open-reader px-1"></i>View Soups</a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                    <img class="img-fluid" src="static/assets/img/portfolio/soup-1.png" alt="Picture of a plate of Soup">
-                </div>
+                    </div> 
+                  </div>
             </div>
+        
 
-            <!-- SCULLERY ITEM 2-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <a href="starters"><i class="fas fa-plus fa-3x"></i></a>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="static/assets/img/portfolio/Starters.png" alt="Picture of cheese and wine">
-                </div>
-            </div>
+         <!-- STARTERS -->
 
-            <!-- SCULLERY ITEM 3-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <a href="mains"><i class="fas fa-plus fa-3x"></i></a>
+        
+            <div class="col-lg-3 p-2">
+                <div class="card-deck">
+                  <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
+                      <img src="static/assets/img/portfolio/Starters.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h4 class="card-title text-center"><em></em></h4> 
+                          </div>
+            
+                        <!---- VIEW BUTTON ---->
+                        <div class="card-body">
+                          <div class="buttons">
+                            <div class="action_btn">
+                              <div>
+                                <a href="{{ url_for('get_starters') }}" id="viewBtn" class="btn btn-outline-secondary"><i class="fa-solid fa-book-open-reader px-1"></i>View Starters</a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                    <img class="img-fluid" src="static/assets/img/portfolio/ChickenMain1.png" alt="Picture of a plate of chicken and chips">
-                </div>
+                    </div> 
+                  </div>
             </div>
+        
 
-            <!-- SCULLERY ITEM 4-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <a href="puddings"><i class="fas fa-plus fa-3x"></i></a>
+        <!-- MAINS -->
+        
+            <div class="col-lg-3 p-2">
+                <div class="card-deck">
+                  <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
+                      <img src="static/assets/img/portfolio/ChickenMain1.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h4 class="card-title text-center"><em></em></h4> 
+                          </div>
+            
+                        <!---- VIEW BUTTON ---->
+                        <div class="card-body">
+                          <div class="buttons">
+                            <div class="action_btn">
+                              <div>
+                                <a href="{{ url_for('get_mains') }}" id="viewBtn" class="btn btn-outline-secondary"><i class="fa-solid fa-book-open-reader px-1"></i>View Mains</a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                    <img class="img-fluid" src="static/assets/img/portfolio/PuddingPic.png" alt="Picture of a chocolate cake">
-                </div>
+                    </div> 
+                  </div>
             </div>
+       
+
+        <!-- PUDDINGS -->
+    
+            <div class="col-lg-3 p-2">
+                <div class="card-deck">
+                  <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
+                      <img src="static/assets/img/portfolio/PuddingPic.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h4 class="card-title text-center"><em></em></h4> 
+                          </div>
+            
+                        <!---- VIEW BUTTON ---->
+                        <div class="card-body">
+                          <div class="buttons">
+                            <div class="action_btn">
+                              <div>
+                                <a href="{{ url_for('get_puddings') }}" id="viewBtn" class="btn btn-outline-secondary"><i class="fa-solid fa-book-open-reader px-1"></i>View Puddings</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div> 
+                  </div>
+            </div>
+        
     </div>
-    </div>
+
+</div>
 </section>
-<!-- SCULLERY SECTION END-->
 
 {% endblock %}
+
+<!-- col-md-6 col-lg-4 mb-5" -->

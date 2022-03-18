@@ -50,6 +50,18 @@
 
         <!---- RECIPE INGREDIENTS SECTION ----->
 <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                <i class="fa-solid fa-comment"></i>
+                    <label for="recipe_summary">RECIPE SUMMARY</label>
+                    <textarea class="form-control" name="recipe_summary" id="recipe_summmary" placeholder="Add a short recipe summary" rows="3" required data-validation-required-message="Please enter recipe summary.">{{ recipe.recipe_summary }}</textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+        </li>
+
         <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -85,11 +97,10 @@
         </li>
 </ul>
 
-<!-- submit button -->
+<!-- Edit & Cancel Buttons -->
             <div class="card-body">
                 <div class="row">
                     <div class="text-center">
-                        <i class="fa-solid fa-pen-to-square"></i>
                         <input class="btn btn-primary btn-success text-shadow" type="submit" value="Edit Recipe">
                         <!-- cancel button -->
                     <a href="{{ url_for('scullery') }}" class="btn btn-danger">

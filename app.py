@@ -100,7 +100,9 @@ def new_recipe():
             "recipe_method": request.form.get("recipe_method"),
             "cooking_time": request.form.get("cooking_time"),
             "recipe_url": request.form.get("recipe_url"),
+            "recipe_summary": request.form.get("recipe_summary"),
         }
+        
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Added Successfully!")
         return redirect(url_for("scullery"))
@@ -126,6 +128,7 @@ def edit_recipe(recipe_id):
             "recipe_method": request.form.get("recipe_method"),
             "cooking_time": request.form.get("cooking_time"),
             "recipe_url": request.form.get("recipe_url"),
+            "recipe_summary": request.form.get("recipe_summary"),
             }
 
     if request.method == "POST":

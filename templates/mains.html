@@ -1,56 +1,59 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- MAINS SECTION -->
+<!-- SECTION -->
 <section class="page-section portfolio" name="mains" id="portfolio">
-    <div class="container">
+  <div class="container">
 
-  
-        <!-- MAINS SECTION HEADING -->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Mains</h2>
-        <!-- ICON DIVIDER -->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fa-solid fa-carrot"></i></div>
-            <div class="divider-custom-line"></div>
-        </div>
 
-        <!-- MAINS CARDS --->
-          {% for main in mains %}
-            <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
-              <img src="{{ main.recipe_url }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{ main.recipe_name }}</h5>
-                    <p class="card-text">RECIPE NAME</p>
-                </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{ main.recipe_ingredients }}
-                  <p class="card-text">RECIPE INGREDIENTS</p>
-              </li>
-              <li class="list-group-item">{{ main.recipe_method}}
-                  <p class="card-text">RECIPE METHOD</p>
-              </li>
-              <li class="list-group-item">{{ main.cooking_time }}
-                  <p class="card-text">RECIPE COOKING TIME</p>
-              </li>
-              </ul>
+      <!-- SECTION HEADING -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Mains</h2>
+      <!-- ICON DIVIDER -->
+      <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fa-solid fa-cheese"></i></div>
+          <div class="divider-custom-line"></div>
+      </div>
 
-              <!---- Edit and Delete Buttons --->
+
+      <!--- CARDS -->
+
+<div class="row recipe-row">
+{% for main in mains %}
+<div class="col-lg-3 deck-col p-4 m-2">
+    <div class="card-deck">
+      <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
+          <img src="{{ main.recipe_url }}" class="card-img-top" alt="...">
               <div class="card-body">
-                <div class="buttons">
-                  <div class="action_btn">
-                    <div><i class="fa-solid fa-pen-to-square"></i>
-                      <a href="{{ url_for('view_recipe', recipe_id=main._id ) }}" id="viewBtn" class="btn btn-outline-secondary">View</a>
-                      <a href="{{ url_for('edit_recipe', recipe_id=main._id ) }}" id="editBtn" class="btn btn-outline-danger">Edit</a>
-                      <a href="" id="doneBtn" class="btn btn-outline-success">Done</a>
-                    </div>
+                <h4 class="card-title text-center"><em>{{ main.recipe_name }}</em></h4> 
+              </div>
+            <ul class="list-group list-group-flush">
+              <h6 class="text-center"><strong>Summary</strong></h6>
+              <li class="list-group-item">{{ main.recipe_summary }}
+                
+            </li>
+            <h6 class="text-center"><strong>Cooking Time</strong></h6>
+            <li class="list-group-item text-center">{{ main.cooking_time }}
+                
+            </li>
+            </ul> 
+
+            <!---- Edit and Delete Buttons ---->
+            <div class="card-body">
+              <div class="buttons">
+                <div class="action_btn">
+                  <div>
+                    <a href="{{ url_for('view_recipe', recipe_id=main._id ) }}" id="viewBtn" class="btn btn-outline-secondary"><i class="fa-solid fa-book-open-reader px-1"></i>View</a>
                   </div>
                 </div>
               </div>
+            </div>
 
-          </div>
-          {% endfor %}
-           
-  </section>         
-
+            
+        </div> 
+      </div>
+    </div>
+{% endfor %}
+</div>
+</section>
 {% endblock %}
