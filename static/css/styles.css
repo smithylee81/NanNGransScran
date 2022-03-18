@@ -40,7 +40,11 @@ header{
 
 .masthead-heading{
   color: #6B705C;
-  justify-content: left;
+  margin-left: 0;
+}
+
+#homePageDivider{
+  color: #6B705C;
 }
 
 h6{
@@ -233,6 +237,12 @@ label{
 
 #recipe-title{
   margin-top: 0;
+}
+
+/****** VIEW RECIPE CARDS *****/
+
+#viewRecipeCard{
+  background-color: #FFE8D6 ;
 }
 
 /************ STARTERS SECTION ************************/

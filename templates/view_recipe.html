@@ -2,35 +2,46 @@
 {% block content %}
 
 
-<div class="row">
-    <div class="col">
-    <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
-      <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">{{ recipe.recipe_name }}</h4>
-            
-        </div>
+<div class="col p-4" id="viewRecipeCard">
+    <div class="row justify-content-center">
+      <div class="card align-items-center" style="width: 50rem;" id="soup_cards"> 
+        <img src="{{ recipe.recipe_url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title"><em>{{ recipe.recipe_name }}</em></h3>
+          </div>
       <ul class="list-group list-group-flush">
-        <h6>RECIPE INGREDIENTS</h6>
-        <li class="list-group-item">{{ recipe.recipe_ingredients }}
-          
-      </li>
-      <li class="list-group-item">{{ recipe.recipe_method}}
-          <p class="card-text">RECIPE METHOD</p>
-      </li>
-      <li class="list-group-item">{{ recipe.cooking_time }}
-          <p class="card-text">RECIPE COOKING TIME</p>
-      </li>
+        <h6 class="text-center"><strong>RECIPE INGREDIENTS</h6></strong>
+        <li class="list-group-item text-center">{{ recipe.recipe_ingredients }}</li>
+        <h6 class="text-center"><strong>RECIPE METHOD</h6></strong>
+        <li class="list-group-item">{{ recipe.recipe_method}}</li>
+        <h6 class="text-center"><strong>COOKING TIME</h6></strong>
+        <li class="list-group-item text-center">{{ recipe.cooking_time }}</li>
       </ul>
 
+      <!---- Edit and Delete Buttons --->
+
+      <div class="card-body">
+        <div class="buttons">
+          <div class="action_btn">
+            <div class="row">
+            <a href="{{ url_for('scullery') }}" id="sculleryBtn" class="btn btn-success">Back to Scullery</a>
+          </div>
+            <div class="col p-2">
+              <a href="{{ url_for('edit_recipe', recipe_id=recipe._id ) }}" id="editBtn" class="btn btn-warning"><i class="fa-solid fa-pen-to-square px-1"></i>Edit</a>
+              <a href="{{ url_for('delete_recipe', recipe_id=recipe._id ) }}" id="deleteBtn" class="btn btn-outline-danger">Delete</a>
+            </div>
           </div>
         </div>
       </div>
 
-  </div> 
-</div>
+      </div>
+    </div>
 </div>
 
 
+
+<!---
+<p class="card-text">RECIPE METHOD</p> 
+<p class="card-text">RECIPE COOKING TIME</p>-->
 
 {% endblock %}

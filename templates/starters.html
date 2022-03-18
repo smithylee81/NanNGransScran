@@ -15,39 +15,35 @@
             <div class="divider-custom-line"></div>
         </div>
 
-        <!-- STARTERS CARDS --->
-          {% for starter in starters %}
-          <div class="row">
-            <div class="col">
-            <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
-              <img src="{{ starter.recipe_url }}" class="card-img-top" alt="...">
+
+        <!--- STARTERS CARDS -->
+
+<div class="row recipe-row">
+  {% for starter in starters %}
+  <div class="col-lg-3 deck-col p-4 m-2">
+      <div class="card-deck">
+        <div class="card align-items-center" style="width: 18rem;" id="soup_cards"> 
+            <img src="{{ starter.recipe_url }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h4 class="card-title">{{ starter.recipe_name }}</h4>
-                    
+                  <h4 class="card-title"><em>{{ starter.recipe_name }}</em></h4> 
                 </div>
               <ul class="list-group list-group-flush">
-                <h6>RECIPE INGREDIENTS</h6>
-                <li class="list-group-item">{{ starter.recipe_ingredients }}
+                <h6 class="text-center"><strong>Summary</strong></h6>
+                <li class="list-group-item">{{ starter.recipe_summary }}
                   
               </li>
-              <li class="list-group-item">{{ starter.recipe_method}}
-                  <p class="card-text">RECIPE METHOD</p>
+              <h6 class="text-center"><strong>Cooking Time</strong></h6>
+              <li class="list-group-item text-center">{{ starter.cooking_time }}
+                  
               </li>
-              <li class="list-group-item">{{ starter.cooking_time }}
-                  <p class="card-text">RECIPE COOKING TIME</p>
-              </li>
-              </ul>
+              </ul> 
 
-              <!---- Edit and Delete Buttons --->
+              <!---- Edit and Delete Buttons ---->
               <div class="card-body">
                 <div class="buttons">
                   <div class="action_btn">
-                    <div><i class="fa-solid fa-pen-to-square"></i>
-                      <a href="{{ url_for('view_recipe', recipe_id=starter._id ) }}" id="viewBtn" class="btn btn-outline-secondary">View</a>
-                     
-                      <a href="{{ url_for('edit_recipe', recipe_id=starter._id ) }}" id="editBtn" class="btn btn-outline-danger">Edit</a>
-                      <a href="{{ url_for('delete_recipe', recipe_id=starter._id ) }}" id="editBtn" class="btn btn-outline-dark">Delete</a>
-                      
+                    <div>
+                      <a href="{{ url_for('view_recipe', recipe_id=starter._id ) }}" id="viewBtn" class="btn btn-outline-secondary"><i class="fa-solid fa-book-open-reader px-1"></i>View</a>
                     </div>
                   </div>
                 </div>
@@ -57,7 +53,9 @@
           </div> 
         </div>
       </div>
-          {% endfor %}
+  {% endfor %}
+</div>
+          
          
   </section>
 
