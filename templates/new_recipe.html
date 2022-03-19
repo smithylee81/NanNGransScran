@@ -117,9 +117,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
-                <p><input type="file" name="file"></p>
-                <p><input type="submit" id="upload_file" target="upload_file" name="upload_file" value="Upload Image"></p>
+            <form method="POST" action="{{ url_for('upload_file')}}" enctype="multipart/form-data">
+                <p><input type="file" name="file" target="upload_file"></p>
+                <p><input type="submit" id="upload_file" target="upload_file" name="upload_file" value="Upload File"></p>
             </form>
         </div>
         <div class="modal-footer">

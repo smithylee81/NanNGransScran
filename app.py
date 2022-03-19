@@ -2,9 +2,9 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from flask_wtf import FlaskForm
-from flask_wtf.file import FileField
-from wtforms import SubmitField
+#from flask_wtf import FlaskForm
+#from flask_wtf.file import FileField
+#from wtforms import SubmitField
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -30,9 +30,9 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 #           abort(400)
 
 
-class MyForm(FlaskForm):
-    file = FileField('File')
-    submit = SubmitField('Submit')
+#class MyForm(FlaskForm):
+#    file = FileField('File')
+#    submit = SubmitField('Submit')
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -135,7 +135,7 @@ def new_recipe():
 
 # Image Upload New Function
 
-@app.route("/upload_image", methods=['POST'])
+@app.route("/upload_file", methods=['POST'])
 def upload_file():
     uploaded_file = request.files['file']
     if uploaded_file.filename != '':
