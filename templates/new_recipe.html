@@ -15,7 +15,7 @@
         </div>
 
         <form name="new_recipe_form" class="row justify-content-center" method="POST" action="{{ url_for('new_recipe') }}">
-        <div class="card" style="width: 18rem;" id="new_recipe_cards"> 
+        <div class="card" style="width: 35rem;" id="new_recipe_cards"> 
             <img src="https://us.123rf.com/450wm/squarelogo/squarelogo1207/squarelogo120700055/14651230-vintage-top-secret-recipe.jpg?ver=6" class="card-img-top" alt="...">
             
         <!---- CATEGORY SELECTION ----->
@@ -92,7 +92,50 @@
                 </div>
             </div>
         </li>
+
+<!-- New Recipe Image Upload 
+        
+            <div class="col text-center m-2 new-recipe-img ">
+                <input type="hidden" id="recipe_url" name="recipe_url" value="../static/assets/img/new-recipe-image.jpg">
+                <button type="submit" id="image_upload_btn" class="btn-sm btn-primary img-upload-btn">Upload Image</button>
+                <button type="submit" id="image_upload_btn" class="btn-sm btn-primary img-upload-btn">Submit</button>
+            </div> -->
+
+<!----------------- MODAL FOR IMAGE UPLOAD ------------------>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Upload a picture of your recipe
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Upload your yummy food pic!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+                <p><input type="file" name="file"></p>
+                <p><input type="submit" id="upload_file" target="upload_file" name="upload_file" value="Upload Image"></p>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <!-- Back Up Image if none uploaded/fails -->
+        <input type="hidden" id="recipe_url" name="recipe_url" value="../static/assets/img/backupImageNewRecipe.jpeg">
+            <!-- Cancel button -->
+          <button type="button" class="btn btn-secondary CancelImgUpload" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </ul>
+
+
+
 
 <!-- submit button -->
             <div class="card-body">
@@ -100,10 +143,12 @@
                 <div class="row">
                     <div class="text-center">
                         <input class="btn btn-primary btn-success text-shadow" type="submit" value="Add to Scullery">
-                        <!-- cancel button -->
-                    <a href="{{ url_for('scullery') }}" class="btn btn-danger">
+                        
+<!-- cancel button -->
+                    <a href="{{ url_for('scullery') }}" class="btn btn-danger p-8 m-2">
                         Cancel <i class="fas fa-times-circle right"></i>
                     </a>
+                
                     </div>
                 </div>
             </div>
@@ -111,7 +156,6 @@
         </form>
     </div>
 </div>
-
 
 
 {% endblock %}

@@ -53,11 +53,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-/*
-    // Target the select element for form validation
-select = document.getElementById('select');
-if (select.value) {
-    // value is set to a valid option, so submit form
-  return true;
-}
-return false; */
+    // (MODAL FOR IMAGE UPLOAD - BOOTSTRAP 5: "Due to how HTML5 defines its semantics, the autofocus HTML attribute has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript")
+
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+
+
