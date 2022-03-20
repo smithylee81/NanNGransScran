@@ -75,47 +75,86 @@ The Main README documentation can be found under [README.md](README.md)
 
 ![Footer](static/assets/img/portfolio/FooterSocialMedia.png "FooterSocialMedia")
 
-![Home Page NavBar Pre-Log In](static/assets/img/portfolio/LogInFromHomePage.png "LogInFromHomePage")
-
-![Home Page NavBar Pre-Log In](static/assets/img/portfolio/RegisterFromHomePage.png "RegisterFromHomePage")
-
-
+- Each link was tested and work well opeining in a new page on the users browser.
 
 # Register Testing
 
+- The username & password fields are a requirement and was tested to ensure the user completes this and is unable to register without these, preventing a file saving with empty details on the database. It also provides the option at the bottom of the form to **Log In** if they are 'already registered?'.
 
+![Register Required Fields Username](static/assets/img/portfolio/RegisterRequiredFieldsUsername.png "RegisterRequiredFieldsUsername")
+
+![Register Required Fields Password](static/assets/img/portfolio/RegisterRequiredFieldsPasword.png "RegisterRequiredFieldsPassword")
+
+- Upon registering the user is advised this was successful and automatically displays a profile page with option to 'go to Scullery':
+
+![Register Success](static/assets/img/portfolio/RegTestSuccess.png "RegisterRequiredFieldsPassword")
 
 
 # Log In Testing
 
+- As with the Register function, the username & password fields are a requirement and these were tested to ensure the user has to complete this, they are unable to log in without the required details and this prevents saving a file with empty details on the database. It also provides the option at the bottom of the form to **Register** if they are 'new here'.
+
+![Log In Required Username](static/assets/img/portfolio/LogInRequiredFieldsUsername.png "LogInRequiredFieldsUsername")
+
+![Log In Required Password](static/assets/img/portfolio/LogInRequiredFieldsPassword.png "LogInRequiredFieldsPassword")
+
+- Once logged in, the user recieves a welcome message and displays their profile page and option to go to the Scullery, which works well:
+
+![Log In Welcome Message & Profile](static/assets/img/portfolio/WelcomeMessageProfile.png "WelcomeMessageProfile")
 
 
 # Navigation Bar Testing
 
+- Each option on the NavBar was selected and the user is taken to the desired routes succesfully.
 
+![NavBar Options](static/assets/img/portfolio/NavBarOptions.png "NavBarOptions")
+
+- For the same experience on a mobile view, the page NavBar is responsive and changes to a **Hamburger Icon** for dropdown menu, with all links continuing to work and take the user to their desired area on the site:
+
+![Hamburger Icon](static/assets/img/portfolio/HamburgerIcon.png "Hamburger Icon")
+
+![NavBar Options Mobile/Tablet View](static/assets/img/portfolio/NavBarResponsive.png "NavBarResponsive")
 
 # Log Out Testing
 
+- The user is given a message to confirm they have been logged out following selecting the **Log Out** option and returns them to the **Log In** page:
+
+![Log Out Message](static/assets/img/portfolio/LoggedOutMessage.png "LoggedOutMessage")
 
 
 # Scullery Testing
 
+- The user is taken to a visual display of options to choose which course recipes they wish to view:
 
+![Scullery Page Options](static/assets/img/portfolio/SculleryPageOptions.png "SculleryPageOptions")
 
 # Browse Courses Testing
 
+- The **Browse Courses** option on the NavBar also provides the available categories as an alternative to going to the **Scullery** page:
+
+![Browse Courses Option on NavBar](static/assets/img/portfolio/BrowseCoursesOptionNavBar.png "BrowseCoursesOptionNavBar")
 
 
 # Add New Recipe Testing
 
+- Adding a recipe is accessed with ease via the **Add Recipe** option on the NavBar and displays a new add recipe form for the user to complete with clear instruction 'add your recipe here!'. All fields are required fields, including placeholders to keep the user right, and there is an option to upload an image of their recipe (*NOTE: Please see the significant bugs section regarding the upload image function*)
+- A cancel button is also availble if the user changes their mind and is redirected abck to the Scullery section.
+- Once the **Add to Scullery** option has been selected the form confirms to the user by **Flash Message** that this has been successful: 
+
+![AddRecipeHere](static/assets/img/portfolio/AddRecipeHere.png "AddRecipeHere")
+
+![Log Out Message](static/assets/img/portfolio/LoggedOutMessage.png "LoggedOutMessage")
 
 
 # Delete Recipe Testing
 
+![Log Out Message](static/assets/img/portfolio/LoggedOutMessage.png "LoggedOutMessage")
 
 
+![Log Out Message](static/assets/img/portfolio/LoggedOutMessage.png "LoggedOutMessage")
 
 
+![Log Out Message](static/assets/img/portfolio/LoggedOutMessage.png "LoggedOutMessage")
 
 
 
