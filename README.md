@@ -34,7 +34,6 @@ I created the site to look vintage and homely using an earthy colour scheme, wit
   - [**User Story Testing**](#user-story-testing)
   - [**Performance Testing**](#performance-testing)
   - [**Responsive**](#responsive)
-- [**Bugs**](#bugs)
 - [**Deployment**](#deployment)
   - [**Running Locally**](#running-locally)
 - [**Credits**](#credits)
@@ -241,15 +240,8 @@ The devices used in this testing include iPhone SE, iPhone XR & iPhone 12 Pro, P
 - Registration Form 
   1. 
 
-### **User Story Testing**
-
-Testing was completed to make sure the user goals were completed
 
 ### **Performance Testing**
-
-
-
-
 
 
 
@@ -261,35 +253,81 @@ The live site address was given to family and friends to confirm the links work 
 [Back to contents](#contents)
 
 
-
-## **Bugs**
-
-
-
-
-
-
-
-
-[Back to contents](#contents)
-
-
 ## **Deployment**
 
-The project was developed using [GitPod](https://gitpod.io/) and pushed to [GitHub](https://github.com/) as follows:
+## How this project was Developed and Deployed
 
-To deploy the page to **GitHub Pages** these steps were taken:
-1. Log in to **GitHub**.
-2. Select **smithylee81_________**.
-3. Click Settings and scroll down to **Pages**.
-4. Under **Source** select **None** and then **Master Branch**.
-5. The site automatically refreshes and the website deployed providing the link: https://______________
+The project was developed using [GitPod](https://gitpod.io/), pushed to [GitHub](https://github.com/) and deployed to Heroku via the following steps:
+
+
+
+### Initial Deployment
+
+- Navigate to [Heroku](https://www.heroku.com/).
+- [Log in](https://id.heroku.com/login) or [Sign Up](https://signup.heroku.com/) for an account.
+  - If Creating an account, select **Python** as the Primary development language.
+  - Activate the account via the confirmation email.
+  - Accept the Terms of Service.
+- Click on **Create new app**.
+- Enter a suitable **App Name** and **Region**.
+- Click **Create App**.
+- Under the **Deploy** tab, under the heading **Deployment Method**, click the **GitHub** icon, and proceed to click the button which states **Connect to GitHub**.
+- Enter your credentials for **GitHub.**
+- Search for the repository required (in this instance, **Nan n Gran's Scran**), and click **Connect.**
+
+### Automatic Deployment
+
+This project was set up to automatically re-deploy with any changes made to the Master Branch. The following steps were taken to enable this.
+
+- Navigate to the **Automatic deploys** section within the **Deploy** tab.
+- Select the **branch** you would like to link to automatic deployment.
+  - As stated above, the `main` branch was chosen for automatic deployment.
+- Click **Enable Automatic Deploys**.
+
+### Environment Variables
+
+The following environment variables must be set within your Heroku Server for the site to deploy and function correctly. Navigate to the **Settings** tab, and under the heading **Config Vars**, select **Reveal Config Vars,** and add the following variables:
+
+- **IP** : 0.0.0.0
+- **PORT** : 5000
+- **MONGO_URI**
+  - This variable can be obtained from **MongoDB** through the following steps:
+  - Log in to [MongoDB](https://www.mongodb.com/2).
+  - Under **Data Storage** click on **Clusters**.
+  - For the Cluster that you would like to connect to, click the **Connect** button.
+  - Click on **Connect your Application.**
+  - Select **Python**, and Version **3.6 or Later.**
+  - Copy the connection string, replacing `<password>` with your MongoDB password, and `myFirstDatabase` with the name of the **MongoDB Collection** (Database) you would like to connect to.
+- **MONGO_DBNAME**
+  - The name of the Database you are connecting to (in the above example, the default would be `myFirstDatabase`.
+- **SECRET_KEY**
+  - A random sequence of characters, required for maintaining session security in Flask. One method of obtaining a Secret Key is through [RandomKeygen](https://randomkeygen.com/).
+
+
+### Environment Variables
+
+- When running this project locally, the **Environment Variables** must be set in order for it to function as intended.
+- Once you have completed any of the upcoming steps to run/deploy the project in your browser or locally, please create a new python file in your root directory called [**envy.py**](https://pypi.org/project/env.py/).
+- Within this file, declare the environment variables described above, in the following format, replacing the `<variable>` with the required variables:
+
+```python
+import os
+os.environ.setdefault("IP", "<variable>")
+os.environ.setdefault("PORT", "<variable>")
+os.environ.setdefault("SECRET_KEY", "<variable>")
+os.environ.setdefault("MONGO_URI", "<variable>")
+os.environ.setdefault("MONGO_DBNAME", "<variable>")
+os.environ.setdefault("GMAPS_API", "<variable>")
+os.environ.setdefault("GMAPS_ID", "<variable> ")
+```
+
+The project will automatically locate this file, and read the required environment variables as and when necessary. This file has not been included within the repo due to the security implications.
 
 
 ### How to run the project locally
 
 To clone this project from GitHub follow the instructions taken from [GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository):
-1. Navigate to the [GitHub Repository](https://github.com/smithylee81_______)
+1. Navigate to the [GitHub Repository](https://github.com/smithylee81/NanNGransScran)
 2. Above the files click the green Download Code link.
 3. To clone using HTTPS click the clipboard symbol under "Clone with HTTPS". To clone using SSH key click Use SSH then click the clipboard symbol. To clone using GitHub CLI select Use GitHub CLI and click the clipboard symbol. 
 4. Open Git Bash
@@ -305,8 +343,10 @@ To clone this project from GitHub follow the instructions taken from [GitHub Doc
 ### **Code**
 
 - Code Institute (CI) Full Stack Developer Course, 
-- CI Flask Task Manager Mini Project and Thorin & Company project
-- Startbootstrap for Website Template
+- CI Flask Task Manager Mini project and Thorin & Company project
+- Startbootstrap for initial Website Template
+- Ben Kavanagh Git Hub Repository via my Mentor (Ronan) recommendation on creating a seperate TESTING.md file (https://github.com/BAK2K3)
+- Bootstrap Version 5.1 (https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
 ### **Content**
 
@@ -316,7 +356,7 @@ To clone this project from GitHub follow the instructions taken from [GitHub Doc
   
 ### **Layout**
 
--Code Institute tutorials using Startbootstrap Theme 
+- Code Institute tutorials using Startbootstrap Theme 
 
 ### **Images**
 
