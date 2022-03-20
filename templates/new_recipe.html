@@ -14,7 +14,7 @@
             <div class="divider-custom-line"></div>
         </div>
 
-        <form name="new_recipe_form" class="row justify-content-center" method="POST" action="{{ url_for('new_recipe') }}">
+        <form name="new_recipe_form" class="row justify-content-center" method="POST" action="{{ url_for('new_recipe') }}" enctype='multipart/form-data'>
         <div class="card" style="width: 35rem;" id="new_recipe_cards"> 
             <img src="https://us.123rf.com/450wm/squarelogo/squarelogo1207/squarelogo120700055/14651230-vintage-top-secret-recipe.jpg?ver=6" class="card-img-top" alt="...">
             
@@ -116,26 +116,27 @@
           <h5 class="modal-title" id="staticBackdropLabel">Upload your yummy food pic!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        
         <div class="modal-body">
             <form method="POST" action="{{ url_for('upload_file')}}" enctype="multipart/form-data">
                 <p><input type="file" name="file" target="upload_file"></p>
                 <p><input type="submit" id="upload_file" target="upload_file" name="upload_file" value="Upload File"></p>
             </form>
         </div>
-        <div class="modal-footer">
-            <!-- Back Up Image if none uploaded/fails -->
-        <input type="hidden" id="recipe_url" name="recipe_url" value="../static/assets/img/backupImageNewRecipe.jpeg">
+
+          <div class="modal-footer">
             <!-- Cancel button -->
-          <button type="button" class="btn btn-secondary CancelImgUpload" data-bs-dismiss="modal">Cancel</button>
-        </div>
+            <button type="button" class="btn btn-secondary CancelImgUpload" data-bs-dismiss="modal">Cancel</button>
+            <!-- Back Up Image if none uploaded/fails -->
+            <input type="hidden" id="recipe_url" name="recipe_url" src="static/assets/img/backupImageNewRecipe.jpeg">
+          </div>
+      
+        
       </div>
     </div>
   </div>
 
 </ul>
-
-
-
 
 <!-- submit button -->
             <div class="card-body">

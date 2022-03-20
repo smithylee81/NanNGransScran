@@ -1,10 +1,11 @@
 import os
+import base64
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-#from flask_wtf import FlaskForm
-#from flask_wtf.file import FileField
-#from wtforms import SubmitField
+from flask_wtf import FlaskForm
+from flask_wtf.file import FileField
+from wtforms import SubmitField
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -13,26 +14,6 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
-
-
-
-# Image Upload - Only accept requests that are up to 1MB in size:
-app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
-
-# Configure the list of approved file extensions:
-app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
-
-# Filenames that do not have one of the approved file extensions will respond with a 400 error.
-#filename = uploaded_file.filename
-#    if filename != '':
-#       file_ext = os.path.splitext(filename)[1]
-#       if file_ext not in current_app.config['UPLOAD_EXTENSIONS']:
-#           abort(400)
-
-
-#class MyForm(FlaskForm):
-#    file = FileField('File')
-#    submit = SubmitField('Submit')
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -111,10 +92,15 @@ def get_puddings():
 
 
 # Add New Recipe Function
-
+    """Allows users to add new recipes"""
 @app.route("/new_recipe", methods=["GET", "POST"])
 def new_recipe():
+    """ pass """
     if request.method == "POST":
+        # the image is here
+        image = request.files.get('file', '')
+        print(image) # this is how it looks: <FileStorage: 'il_794xN.3171857386_19oz.jpg' ('image/jpeg')>
+
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
@@ -133,7 +119,8 @@ def new_recipe():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("new_recipe.html", categories=categories)
 
-# Image Upload New Function
+
+# Image Upload on New Recipe Function
 
 @app.route("/upload_file", methods=['POST'])
 def upload_file():
@@ -141,6 +128,29 @@ def upload_file():
     if uploaded_file.filename != '':
         uploaded_file.save(uploaded_file.filename)
     return redirect(url_for('new_recipe'))
+
+# Image Upload - Only accept requests that are up to 1MB in size:
+app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
+
+# Configure the list of approved file extensions:
+app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
+
+# Filenames that do not have one of the approved file extensions will 
+# respond with a 400 error.
+
+#filename = uploaded_file.filename
+#    if filename != '':
+#       file_ext = os.path.splitext(filename)[1]
+#       if file_ext not in current_app.config['UPLOAD_EXTENSIONS']:
+#           abort(400)
+
+class MyForm(FlaskForm):
+    file = FileField('File')
+    submit = SubmitField('Submit')
+
+
+
+
 
 
 # Edit Recipe Function

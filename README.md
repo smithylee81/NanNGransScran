@@ -211,6 +211,14 @@ Features relevant to all pages:
 
 ## **Testing**
 
+---
+
+## **Testing**
+
+Testing documentation, processes, and outcomes can be found under [TESTING.md](TESTING.md).
+
+---
+
 ### **Functionality Testing**
 
 Functionality was tested on the following browsers: Google Chrome, Mozilla Firefox, Microsoft EDGE and Safari.
