@@ -209,7 +209,6 @@ Features relevant to all pages:
 
 [Back to contents](#contents)
 
-## **Testing**
 
 ---
 
