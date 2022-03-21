@@ -341,6 +341,11 @@ All functionality worked as intended.
 
 ***Fixed: No***
 
+## 'Vintage Party' font
+
+- This font only appeared to show on some text within Heroku and not at all within the Github/Gitpod deployment. BAck up 'Sans- serif' used just incase but would have preferred to have enabled a better font that worked well for the site. 
+
+***Fixed: No***
 
 ---
 [Back to contents](#contents)
