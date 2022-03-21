@@ -1,11 +1,7 @@
 import os
-import base64
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from flask_wtf import FlaskForm
-from flask_wtf.file import FileField
-from wtforms import SubmitField
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -143,10 +139,6 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 #       file_ext = os.path.splitext(filename)[1]
 #       if file_ext not in current_app.config['UPLOAD_EXTENSIONS']:
 #           abort(400)
-
-class MyForm(FlaskForm):
-    file = FileField('File')
-    submit = SubmitField('Submit')
 
 
 
