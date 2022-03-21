@@ -2,7 +2,7 @@
 {% block content %}
 
 
-<!------NEW RECIPE FORM, credit to the CI Task Manager Project and Bootstrap Forms & Input Fields ----->
+<!-- NEW RECIPE FORM, credit to the CI Task Manager Project and Bootstrap Forms & Input Fields -->
 <div class="container-fluid">
     <div class="row justify-content-center" id="new_recipecard">
 
@@ -18,7 +18,7 @@
         <div class="card" style="width: 35rem;" id="new_recipe_cards"> 
             <img src="https://us.123rf.com/450wm/squarelogo/squarelogo1207/squarelogo120700055/14651230-vintage-top-secret-recipe.jpg?ver=6" class="card-img-top" alt="...">
             
-        <!---- CATEGORY SELECTION ----->
+        <!-- CATEGORY SELECTION -->
             <div class="input-group mb-3 justify-content-center">
                 <div class="input-group-prepend floating-label">
                   <label class="input-group-text" for="category_name">Recipe Type</label>
@@ -32,7 +32,7 @@
               </div>
             <hr>
 
-        <!---- RECIPE NAME SECTION ----->
+        <!-- RECIPE NAME SECTION -->
         <div class="card-body" id="recipe-title">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <!---- RECIPE INGREDIENTS SECTION ----->
+        <!-- RECIPE INGREDIENTS SECTION -->
 <ul class="list-group list-group-flush">
     
         <li class="list-group-item">
@@ -70,7 +70,7 @@
             </div>
         </li>
 
-       <!---- RECIPE METHOD SECTION ----->
+       <!-- RECIPE METHOD SECTION -->
         <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </li>
-        <!---- COOKING TIME SECTION ----->
+        <!-- COOKING TIME SECTION -->
          <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -93,15 +93,9 @@
             </div>
         </li>
 
-<!-- New Recipe Image Upload 
+<!-- New Recipe Image Upload -->
         
-            <div class="col text-center m-2 new-recipe-img ">
-                <input type="hidden" id="recipe_url" name="recipe_url" value="../static/assets/img/new-recipe-image.jpg">
-                <button type="submit" id="image_upload_btn" class="btn-sm btn-primary img-upload-btn">Upload Image</button>
-                <button type="submit" id="image_upload_btn" class="btn-sm btn-primary img-upload-btn">Submit</button>
-            </div> -->
-
-<!----------------- MODAL FOR IMAGE UPLOAD ------------------>
+<!-- MODAL FOR IMAGE UPLOAD -->
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -141,19 +135,20 @@
 <!-- submit button -->
             <div class="card-body">
                 <div class="col-12">
-                <div class="row">
+                  <div class="row">
                     <div class="text-center">
                         <input class="btn btn-primary btn-success text-shadow" type="submit" value="Add to Scullery">
                         
 <!-- cancel button -->
-                    <a href="{{ url_for('scullery') }}" class="btn btn-danger p-8 m-2">
+                       <a href="{{ url_for('scullery') }}" class="btn btn-danger p-8 m-2">
                         Cancel <i class="fas fa-times-circle right"></i>
-                    </a>
+                       </a>
                 
                     </div>
-                </div>
+                  </div>
+              </div>
             </div>
-        </div>
+            </div>
         </form>
     </div>
 </div>

@@ -2,7 +2,7 @@
 {% block content %}
 
 
-<!------NEW RECIPE FORM, credit to the CI Task Manager Project and Bootstrap Forms & Input Fields ----->
+<!-- NEW RECIPE FORM, credit to the CI Task Manager Project and Bootstrap Forms & Input Fields ----->
 <div class="container-fluid">
     <div class="row justify-content-center" id="new_recipecard">
 
@@ -18,7 +18,7 @@
         <div class="card" style="width: 18rem;" id="new_recipe_cards"> 
             <img src="https://previews.123rf.com/images/studiostoks/studiostoks1508/studiostoks150800070/44238328-ideen-kochbuch-hausrezept-lebensmittel-kochen-tutorial-frau-pop-art-retro-stil.jpg" class="card-img-top" alt="...">
             
-        <!---- CATEGORY SELECTION ----->
+        <!-- CATEGORY SELECTION ----->
             <div class="input-group mb-3 justify-content-center">
                 <div class="input-group-prepend floating-label">
                   <label class="input-group-text" for="category_name">Recipe Type</label>
@@ -36,19 +36,19 @@
               </div>
             <hr>
 
-        <!---- RECIPE NAME SECTION ----->
+        <!-- RECIPE NAME SECTION ----->
         <div class="card-body" id="recipe-title">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <i class="fa-solid fa-signature prefix"></i>
                   <label for="recipe_name">RECIPE NAME</label>
-                  <input type="text" name="recipe_name" value="{{ recipe.recipe_name }}"class="form-control" placeholder="Add Recipe Name Here" id="recipe_name" required data-validation-required-message="Please enter a recipe name.">
+                  <input type="text" name="recipe_name" value="{{ recipe.recipe_name }}" class="form-control" placeholder="Add Recipe Name Here" id="recipe_name" required data-validation-required-message="Please enter a recipe name.">
                   <p class="help-block text-danger"></p>
                 </div>
             </div>
         </div>
 
-        <!---- RECIPE INGREDIENTS SECTION ----->
+        <!-- RECIPE INGREDIENTS SECTION ----->
 <ul class="list-group list-group-flush">
 
         <li class="list-group-item">
@@ -56,7 +56,7 @@
                 <div class="form-group floating-label-form-group controls">
                 <i class="fa-solid fa-comment"></i>
                     <label for="recipe_summary">RECIPE SUMMARY</label>
-                    <textarea class="form-control" name="recipe_summary" id="recipe_summmary" placeholder="Add a short recipe summary" rows="3" required data-validation-required-message="Please enter recipe summary.">{{ recipe.recipe_summary }}</textarea>
+                    <textarea class="form-control" name="recipe_summary" id="recipe_summary" placeholder="Add a short recipe summary" rows="3" required data-validation-required-message="Please enter recipe summary.">{{ recipe.recipe_summary }}</textarea>
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
@@ -73,7 +73,7 @@
             </div>
         </li>
 
-       <!---- RECIPE METHOD SECTION ----->
+       <!-- RECIPE METHOD SECTION ----->
         <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -84,13 +84,13 @@
                 </div>
             </div>
         </li>
-        <!---- COOKING TIME SECTION ----->
+        <!-- COOKING TIME SECTION ----->
          <li class="list-group-item">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <i class="fa-solid fa-clock prefix"></i>
                   <label for="cooking_time">COOKING TIME</label>
-                  <input type="text" name="cooking_time" value="{{ recipe.cooking_time }}"class="form-control" placeholder="Add cooking time here" id="cooking_time" required data-validation-required-message="Please enter cooking time.">
+                  <input type="text" name="cooking_time" value="{{ recipe.cooking_time }}" class="form-control" placeholder="Add cooking time here" id="cooking_time" required data-validation-required-message="Please enter cooking time.">
                   <p class="help-block text-danger"></p>
                 </div>
             </div>

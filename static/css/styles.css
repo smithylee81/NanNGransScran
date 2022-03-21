@@ -25,13 +25,13 @@ body{
 }
 
 #portfolio{
-  background-color: #DDBEA9;
+  background-color:#DDBEA9;
 }
 
 /********* HEADINGS & NAVBAR **********/
 
 header{
-  color: #495057;
+  color:#495057;
   background-image: url("https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg");
   background-repeat: no-repeat;
   background-size:cover;
@@ -39,12 +39,12 @@ header{
 }
 
 .masthead-heading{
-  color: #6B705C;
+  color:#6B705C;
   margin-left: 0;
 }
 
 #homePageDivider{
-  color: #6B705C;
+  color:#6B705C;
 }
 
 h3{
@@ -52,7 +52,7 @@ h3{
 }
 
 .navbar {
-  background-color: #CB997E;
+  background-color:#CB997E;
 }
 
 .navbar-brand{
@@ -62,7 +62,7 @@ h3{
 
 /********* About Section - Home Page **********/
 #about{
-  background-color: #DDBEA9;
+  background-color:#DDBEA9;
 }
 
 /************ REGISTER CONTAINER ********************/
@@ -74,7 +74,7 @@ h3{
 .register-head{
   margin-top: 0.5rem;
   text-align: center;
-  color: #6c757d;
+  color:#6c757d;
 }
 
 #sendMessageButton{
@@ -82,7 +82,7 @@ h3{
 }
 
 #registerCard{
-  background-color: #FFE8D6;
+  background-color:#FFE8D6;
 }
 
 label{
@@ -93,13 +93,13 @@ label{
 .flashes h4 {
   justify-content: center;
   line-height: 2;
-  text-shadow: #959596;
+  text-shadow:#979799;
   font-family: 'Vintage party', 'sans-serif';
 }
 
 /************ LOG IN CONTAINER ********************/
 #loginCard{
-  background-color: #FFE8D6;
+  background-color:#FFE8D6;
 }
 
 /************ SCULLERY SECTION ********************/
@@ -122,6 +122,13 @@ label{
   width: 50%;
 }
 
+#scullery_cards{
+  border: 1px solid #dadada;
+  box-shadow: 10px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  width: 50%;
+}
+
 /************ NEW RECIPE SECTION ************************/
 
 #new_recipe_cards{
@@ -137,7 +144,7 @@ label{
 }
 
 #new_recipecard{
-  background-color: #FFE8D6;
+  background-color:#FFE8D6;
 }
 
 #new_recipe_header{
@@ -157,7 +164,7 @@ label{
 /****** VIEW RECIPE CARDS *****/
 
 #viewRecipeCard{
-  background-color: #FFE8D6 ;
+  background-color:#FFE8D6 ;
 }
 
 /************ STARTERS SECTION ************************/
@@ -175,7 +182,7 @@ label{
 /************ PROFILE PAGE ***********************/
 
 #profilePage{
-  background-color: #ffe8d6;
+  background-color:#ffe8d6;
 }
 
 
@@ -195,12 +202,12 @@ label{
 .footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #CB997E;
-  color: #fff;
+  background-color:#CB997E;
+  color:#fff;
 }
 
 .copyright {
-  background-color: #CB997E;
+  background-color:#CB997E;
 }
 
 /*************** CSS BELOW INHERITED FROM STARTBOOTSTRAP THEME 'FREELANCER' 
