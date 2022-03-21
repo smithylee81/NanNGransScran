@@ -35,11 +35,10 @@ I created the site to look vintage and homely using an earthy colour scheme, wit
   - [**Performance Testing**](#performance-testing)
   - [**Responsive**](#responsive)
 - [**Deployment**](#deployment)
-  - [**Running Locally**](#running-locally)
 - [**Credits**](#credits)
   - [**Code**](#code)
   - [**Content**](#content)
-  - [**Images**](#images)
+  - [**Layout**](#layout)
   - [**Acknowledgements**](#acknowledgements)
   
 
@@ -69,8 +68,9 @@ I created the site to look vintage and homely using an earthy colour scheme, wit
 
 ## **Design Choices**
 
-
 ### **Fonts**
+
+I wanted to create a vintage look and therfore utilised the 'Vintage Party' from 'CDN Fonts' ['http://fonts.cdnfonts.com/css/vintage-party'], with 'sans-serif' as a back-up font;
 
 ### **Colours**
 
@@ -91,9 +91,22 @@ These colours complement each other well and are not too striking, in keeping wi
 
 ### **Imagery**
 
-Images feature a vintage image of a Grandmother tasting a recipe and images of food include Soup for entering into the ‘Soup’ recipes, an image of Cheese and Wine for the ‘Starters’ recipes, a Chicken Dish for the ‘Mains’ recipes and Chocolate Cake for the ‘Puddings’ recipes. 
-Most of the images have been sourced from [Free PNGs]( https://www.freepngs.com) and are free to use. 
-The types of images chosen showcase the themes for each recipe category and hopefully provide the user with an intuitive experience. 
+Images feature vintage & retro pictures to keep the theme, with main background image on home page of a Grandmother tasting a recipe and relevant images of food courses throughout the website.  
+
+Images have been sourced from a variety of sites with free use:
+
+1. [Free PNGs]( https://www.freepngs.com) 
+2. [Stock Adobe] (https://stock.adobe.com/hu/search/images?k=grandma+cooking+vintage); (https://t3.ftcdn.net/jpg/04/16/23/16/360_F_416231629_f3tTvaDgVMeXbn7GFmilwGLhiWPekXTG.jpg)
+3. [Unsplash] (https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c291cHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)
+4. [Scotsman] (https://www.scotsman.com/images-e.jpimedia.uk/imagefetch/http://www.scotsman.com/webimage/Prestige.Item.1.62467723!image/image.jpg?width=2048&enable=upscale)
+5. [The Hidden Veggies](https://thehiddenveggies.com/wp-content/uploads/2019/11/vegan-pate-mushroom-2.jpg)
+6. [Scottish Scran] (https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1024/https://scottishscran.com/wp-content/uploads/2021/03/Haggis-Bon-Bons-Recipe-73-1024x683.jpg)
+7. [The View From Great Island](https://theviewfromgreatisland.com/wp-content/uploads/2018/04/rhubarb-crisp-2447-April-07-2018.jpg)
+8. [Clipart] (https://us.123rf.com/450wm/squarelogo/squarelogo1207/squarelogo120700055/14651230-vintage-top-secret-recipe.jpg?ver=6) , (https://previews.123rf.com/images/studiostoks/studiostoks1508/studiostoks150800070/44238328-ideen-kochbuch-hausrezept-lebensmittel-kochen-tutorial-frau-pop-art-retro-stil.jpg)
+9. [EbayImg](https://i.ebayimg.com/images/g/BIEAAOSwakJcJ3tN/s-l300.jpg)
+
+
+The types of images chosen showcase the themes for each recipe category and hopefully provide the user with a vintage & retro type feel and an intuitive experience. 
 
 
 ### **Wireframes**
@@ -170,30 +183,32 @@ Wireframes were hand drawn and can be found in pdf form in [wireframes](static/a
 
 Features relevant to all pages:
 - **base.html - Header & Footer**
-    - Contains navigation links and is fixed to the top of the page for easy use on all devices (this was done using Bootstrap sticky-top class).
-    - All links change color when hovered over to allow easy use of navigation and provide clarity to the user on where they are with the mouse pointer on desktop. 
+    - Contains navigation links and is fixed to the top of the page for easy use on all devices (this was done using a Bootstrap 5 NavBar). 
     - Both the Home link and Title Logo provide navigation back to the Home page for ease of use and return to the main home page.
-    - Navigation links collapse into a menu button on mobile and tablet view for an easy user experience. 
+    - Navigation links collapse into a hamburger menu button on mobile and tablet view for an easy user experience. 
     - The colour scheme is designed to be vintage and easy to read with the contrast tested on Google Dev Tools to preview.
 
 - **Footer** 
     - Designed to sit at the bottom of the page after all of the content 
     - Contains social media links to the Developer’s GitHub repository and links to Facebook, Discord and LinkedIn. 
 
-#### *scullery.html*
-
-
-
-  
-#### *register.html*
 
 - **Register Form**
     - For the user to register their name & email address to provide Log In details and their own profile/account. Fields: Name, Email and Password are required and display an error message if not filled in when selecting submit. 
 
-    ### **Future Features**
-- I would like to add a section where the family can view the handwritten recipes pages that Nanna & Gran wrote personally.
-- I would also like to add an option for an alert to other users when a new recipe has been added. 
 
+    ### **Future Features**
+- I would like to add a section where the family can view the handwritten recipe pages that Nanna & Gran wrote personally, time constraints impacted this.
+- I would also like to add an option for an alert to other users when a new recipe has been added so that they can go onto the app and view this is they wish. 
+- I would have liked to have successfully created a python function and appropriate syntax to enable the upload of an image by the user before final deployment and submission, however my attempts were unsuccessful to date.
+- I would have liked to have utilised the 'created_by' section with a feature to allow edit and delete of the users own created recipes ONLY, time constraints impacted on same.
+- I would also like to utilise the 'search' bar in future development for users to find what they are looking for quicker and easier. The search fields are present on NavBar but have not been 'wired up' to the app.py with an appropriate function as yet.
+- I would like the Profile page to be built out more with facility to upload an image to this section for a more personalised user feel.
+- I would also like to utilise a 'star ratings' feature for the family to rate the recipes.
+- I would also like a 'favorites' selection to be implemented and enabled which displays on the users profile. 
+
+
+[Back to contents](#contents)
 
 ### **Responsive Design**
 
@@ -217,32 +232,11 @@ Testing documentation, processes, and outcomes can be found under [TESTING.md](T
 
 ---
 
-### **Functionality Testing**
-
-Functionality was tested on the following browsers: Google Chrome, Mozilla Firefox, Microsoft EDGE and Safari.
-
-The devices used in this testing include iPhone SE, iPhone XR & iPhone 12 Pro, Pixel 5, iPad Air & Mini, Samsung Galaxy S8+ , Surface Pro 7, Surface Duo, Galaxy Fold, Samsung Galaxy A51/71, Nest Hub and Nest Hub Max.
-
-- Navigation bar
-  1. 
-
-
-- Drop Down Menu (Mobile)
-  1. 
-
-
-- Footer 
-  1. 
-
--Scullery Recipes; Soup, Starters, Mains, Puddings
-  1. 
-
-- Registration Form 
-  1. 
-
-
 ### **Performance Testing**
 
+WebPageTest utilised: [https://app.webpagetest.org/]
+
+![PerformanceTestingResults](static/assets/img/portfolio/PerformanceTestingResults.png "PerformanceTestingResults")
 
 
 ### **Responsive**
@@ -258,7 +252,6 @@ The live site address was given to family and friends to confirm the links work 
 ## How this project was Developed and Deployed
 
 The project was developed using [GitPod](https://gitpod.io/), pushed to [GitHub](https://github.com/) and deployed to Heroku via the following steps:
-
 
 
 ### Initial Deployment
@@ -345,27 +338,23 @@ To clone this project from GitHub follow the instructions taken from [GitHub Doc
 - Code Institute (CI) Full Stack Developer Course, 
 - CI Flask Task Manager Mini project and Thorin & Company project
 - Startbootstrap for initial Website Template
-- Ben Kavanagh Git Hub Repository via my Mentor (Ronan) recommendation on creating a seperate TESTING.md file (https://github.com/BAK2K3)
+- Ben Kavanagh Git Hub Repository via my Mentor (Ronan) recommendations on creating a seperate TESTING.md file (https://github.com/BAK2K3)
 - Bootstrap Version 5.1 (https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
 ### **Content**
 
-- README.md help came from: 
+- README.md & TESTING.md help came from: 
   -[Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME)
-  -CI Mentors – Spencer Barriball and Ronan McClelland for continued support, guidance and encouragement. 
+  -CI Mentor – Ronan McClelland, thank you for your continued support, guidance, constructive feedback and encouragement. 
   
 ### **Layout**
 
-- Code Institute tutorials using Startbootstrap Theme 
-
-### **Images**
-
-
+- Code Institute tutorials using Startbootstrap Theme, some themes from this later disregarded as not required. 
 
 
 ### **Acknowledgements**
 
-- My CI Mentors for the continued support, encouragement and helpful advice and feedback.
+- My CI Mentors Ronan McClelland and Spencer Barriball for the continued support, encouragement and helpful advice and feedback.
 - My family and friends for testing the site and giving feedback.
 
 [Back to contents](#contents)
