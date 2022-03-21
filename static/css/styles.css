@@ -43,6 +43,11 @@ header{
   margin-left: 0;
 }
 
+.masthead-subheading{
+  font-family: 'Vintage Party', 'sans-serif';
+  color: #6B705C ;
+}
+
 #homePageDivider{
   color:#6B705C;
 }
@@ -64,6 +69,12 @@ h3{
 #about{
   background-color:#DDBEA9;
 }
+
+.about-section{
+  color: #6B705C ;
+}
+
+
 
 /************ REGISTER CONTAINER ********************/
 
@@ -185,6 +196,25 @@ label{
   background-color:#ffe8d6;
 }
 
+#profile{
+  background-color:#ffe8d6;
+}
+
+#profileCard{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-img-top{
+  margin-top: 2rem;
+}
+
+.fontawesome-i2svg-active{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 
 /************ EDIT & DONE BUTTONS ON RECIPE CARDS ****/
 
@@ -201,13 +231,23 @@ label{
 
 .footer {
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
   background-color:#CB997E;
   color:#fff;
 }
 
+.signature{
+  color: #6B705C;
+  font-size: 2rem;
+}
+
 .copyright {
   background-color:#CB997E;
+}
+
+.social-icons{
+  color: #6B705C;
+  font-size: 2rem;
 }
 
 /*************** CSS BELOW INHERITED FROM STARTBOOTSTRAP THEME 'FREELANCER' 
@@ -456,9 +496,9 @@ kbd,
 samp {
   font-family: var(--bs-font-monospace);
   font-size: 1em;
-  direction: ltr /* rtl:ignore */;
+  direction: ltr /* rtl:ignore ;
   unicode-bidi: bidi-override;
-}
+}*/
 
 pre {
   display: block;

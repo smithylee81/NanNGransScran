@@ -142,9 +142,6 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 
 
 
-
-
-
 # Edit Recipe Function
 
 @app.route("/edit_recipe/<recipe_id>",methods=["GET", "POST"])
