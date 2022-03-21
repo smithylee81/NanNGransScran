@@ -1,6 +1,6 @@
 <h1 align="center">Nan & Grans Scran</h1>
 
-<h2 align="center"><img src="____________ "></h2>
+<h2 align="center"><img src="static/assets/img/portfolio/AmIResponsiveTest.png"></h2>
 
 ## About
 
