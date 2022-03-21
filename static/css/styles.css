@@ -17,10 +17,12 @@
  CREDIT TO 'CDN FONTS.COM'*/
 
 
- @import url('http://fonts.cdnfonts.com/css/vintage-party');
+ /*@import url('http://fonts.cdnfonts.com/css/vintage-party');*/
+
+ @import url('http://fonts.cdnfonts.com/css/candy');
 
 body{
-  font-family: 'Vintage Party', 'sans-serif';
+  font-family: 'Candy', 'sans-serif';
 }
 
 #portfolio{
@@ -43,7 +45,7 @@ header{
 }
 
 .masthead-subheading{
-  font-family: 'Vintage Party', 'sans-serif';
+  font-family: 'Candy', 'sans-serif';
   color: #6B705C ;
 }
 
@@ -52,7 +54,7 @@ header{
 }
 
 h3{
-  font-family: 'Vintage Party', 'sans-serif';
+  font-family: 'Candy', 'sans-serif';
 }
 
 .navbar {
@@ -60,7 +62,7 @@ h3{
 }
 
 .navbar-brand{
-  font-family: 'Vintage Party', 'sans-serif' ;
+  font-family: 'Candy', 'sans-serif' ;
 }
 
 
@@ -224,7 +226,7 @@ label{
   justify-content: center;
   line-height: 2;
   text-shadow:#979799;
-  font-family: 'Vintage party', 'sans-serif';
+  font-family: 'Candy', 'sans-serif';
 }
 
 /************ LOG IN CONTAINER ********************/
