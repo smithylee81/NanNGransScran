@@ -343,9 +343,9 @@ All functionality worked as intended.
 
 ## 'Vintage Party' font
 
-- This font only appeared to show on some text within Heroku and not at all within the Github/Gitpod deployment. BAck up 'Sans- serif' used just incase but would have preferred to have enabled a better font that worked well for the site. 
+- This font only appeared to show on some text within Heroku and not at all within the Github/Gitpod deployment. BAck up 'Sans- serif' used just incase but would have preferred to have enabled a better font that worked well for the site. The font would only show once an aciotn had been undertaken on the app on Heroku. Changed last minute before deployment to 'Candy' from CDN Fonts as 'Vintage Party', although vintage looking, proved diffciult to read in certain font sizes.
 
-***Fixed: No***
+***Fixed: Yes***
 
 ---
 [Back to contents](#contents)
